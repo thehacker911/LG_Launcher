@@ -1,7 +1,6 @@
 package com.android.settings.wifi;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface.OnClickListener;
 import android.os.Bundle;

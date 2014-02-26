@@ -1,22 +1,17 @@
 package com.android.settings.inputmethod;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
-import android.app.Dialog;
-import android.app.Fragment;
-import android.content.ContextWrapper;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.pm.ApplicationInfo;
-import android.content.pm.ComponentInfo;
-import android.content.pm.PackageItemInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.ServiceInfo;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceClickListener;
-import android.preference.PreferenceFragment;
-import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
 import android.view.textservice.SpellCheckerInfo;
 import android.view.textservice.TextServicesManager;

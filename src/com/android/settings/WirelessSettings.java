@@ -3,11 +3,9 @@ package com.android.settings;
 import android.app.Activity;
 import android.app.AlertDialog.Builder;
 import android.app.Dialog;
-import android.app.Fragment;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
@@ -22,18 +20,13 @@ import android.os.Bundle;
 import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.preference.CheckBoxPreference;
-import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
-import android.preference.PreferenceFragment;
-import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
-import android.preference.TwoStatePreference;
 import android.provider.Settings.Global;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.ContextThemeWrapper;
 import com.android.internal.telephony.SmsApplication;
 import com.android.internal.telephony.SmsApplication.SmsApplicationData;
 import com.android.settings.nfc.NfcEnabler;
@@ -183,14 +176,14 @@ public class WirelessSettings extends RestrictedSettingsFragment
       getPreferenceScreen().removePreference(localCheckBoxPreference2);
       String str = Settings.Global.getString(localActivity.getContentResolver(), "airplane_mode_toggleable_radios");
       int j;
-      label250: boolean bool1;
-      label283: label586: ConnectivityManager localConnectivityManager;
+      label249: boolean bool1;
+      label282: label585: ConnectivityManager localConnectivityManager;
       boolean bool2;
       if ((i == 0) && (getResources().getBoolean(17891400)))
       {
         j = 1;
         if (j != 0)
-          break label733;
+          break label731;
         PreferenceScreen localPreferenceScreen3 = getPreferenceScreen();
         Preference localPreference3 = findPreference("wimax_settings");
         if (localPreference3 != null)
@@ -230,12 +223,12 @@ public class WirelessSettings extends RestrictedSettingsFragment
         DevicePolicyManager localDevicePolicyManager = (DevicePolicyManager)localActivity.getSystemService("device_policy");
         getPreferenceScreen().removePreference(localPreference1);
         if (localDevicePolicyManager.getGlobalProxyAdmin() != null)
-          break label770;
+          break label768;
         bool1 = true;
         localPreference1.setEnabled(bool1);
         localConnectivityManager = (ConnectivityManager)localActivity.getSystemService("connectivity");
         if ((i == 0) && (localConnectivityManager.isTetheringSupported()))
-          break label776;
+          break label774;
         getPreferenceScreen().removePreference(findPreference("tether_settings"));
         protectByRestrictions("tether_settings");
         bool2 = getResources().getBoolean(17891405);
@@ -258,14 +251,14 @@ public class WirelessSettings extends RestrictedSettingsFragment
         i = 0;
         continue;
         j = 0;
-        break label250;
-        label733: if ((str != null) && ((str.contains("wimax")) || (j == 0)))
-          break label283;
+        break label249;
+        label731: if ((str != null) && ((str.contains("wimax")) || (j == 0)))
+          break label282;
         findPreference("wimax_settings").setDependency("toggle_airplane");
-        break label283;
-        label770: bool1 = false;
-        break label586;
-        label776: findPreference("tether_settings").setTitle(Utils.getTetheringLabel(localConnectivityManager));
+        break label282;
+        label768: bool1 = false;
+        break label585;
+        label774: findPreference("tether_settings").setTitle(Utils.getTetheringLabel(localConnectivityManager));
       }
       catch (IllegalArgumentException localIllegalArgumentException)
       {

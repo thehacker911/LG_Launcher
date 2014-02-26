@@ -10,16 +10,11 @@ import android.os.Handler;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.Parcelable.Creator;
-import android.preference.DialogPreference;
-import android.preference.Preference;
 import android.preference.Preference.BaseSavedState;
 import android.preference.SeekBarDialogPreference;
 import android.provider.Settings.System;
 import android.util.AttributeSet;
-import android.view.AbsSavedState;
 import android.view.View;
-import android.widget.AbsSeekBar;
-import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 

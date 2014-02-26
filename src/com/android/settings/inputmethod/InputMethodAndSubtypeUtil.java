@@ -1,13 +1,9 @@
 package com.android.settings.inputmethod;
 
-import android.app.Fragment;
 import android.content.ContentResolver;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
-import android.preference.PreferenceFragment;
-import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
-import android.preference.TwoStatePreference;
 import android.provider.Settings.Secure;
 import android.provider.Settings.SettingNotFoundException;
 import android.text.TextUtils;

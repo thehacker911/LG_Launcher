@@ -7,7 +7,6 @@ import android.content.IntentFilter;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.Switch;
-import android.widget.TextView;
 import android.widget.Toast;
 import com.android.settings.WirelessSettings;
 

@@ -1272,8 +1272,8 @@ Per esborrar també música, imatges i altres dades d'usuari, cal esborrar l'"<b
     <string name="accessibility_screen_magnification_summary">"Quan aquesta funció està activada, pots ampliar o allunyar si piques tres cops la pantalla.
 
 Quan ampliïs, pots fer el següent.
-"<li><ul>"Panoràmica: arrossega dos dits o més per la pantalla.
-"<li>"Ajustar el nivell de zoom: apropa dos o més dits o bé separa'ls."</li></ul></li>"
+"<ul><li>"Panoràmica: arrossega dos dits o més per la pantalla.
+"<li>"Ajustar el nivell de zoom: apropa dos o més dits o bé separa'ls."</li></li></ul>"
 
 També pots ampliar de manera temporal el que tinguis a sota del dit si piques tres cops i mantens premut. En aquest estat ampliat, pots arrossegar el dit per explorar diverses parts de la pantalla. Aixeca el dit per tornar a l'estat previ.
 

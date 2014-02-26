@@ -1,8 +1,7 @@
 package com.android.settings.accessibility;
 
-import android.app.Fragment;
+import android.app.Activity;
 import android.content.ContentResolver;
-import android.content.ContextWrapper;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -10,8 +9,7 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceCategory;
-import android.preference.PreferenceFragment;
-import android.preference.PreferenceGroup;
+import android.preference.PreferenceScreen;
 import android.provider.Settings.Secure;
 import android.view.accessibility.CaptioningManager;
 import android.view.accessibility.CaptioningManager.CaptionStyle;

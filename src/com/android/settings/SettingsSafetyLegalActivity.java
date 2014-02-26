@@ -1,10 +1,7 @@
 package com.android.settings;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
-import android.app.Dialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnClickListener;
@@ -12,7 +9,6 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.SystemProperties;
-import android.view.ContextThemeWrapper;
 import android.view.KeyEvent;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -78,7 +74,7 @@ public class SettingsSafetyLegalActivity extends AlertActivity
       {
         public void onPageFinished(WebView paramAnonymousWebView, String paramAnonymousString)
         {
-          SettingsSafetyLegalActivity.access$000(SettingsSafetyLegalActivity.this).setTitle(SettingsSafetyLegalActivity.this.getString(2131428308));
+          SettingsSafetyLegalActivity.this.mAlert.setTitle(SettingsSafetyLegalActivity.this.getString(2131428308));
         }
 
         public void onReceivedError(WebView paramAnonymousWebView, int paramAnonymousInt, String paramAnonymousString1, String paramAnonymousString2)

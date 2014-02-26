@@ -1,11 +1,8 @@
 package com.android.settings.quicklaunch;
 
-import android.app.Activity;
 import android.app.ListActivity;
-import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.content.pm.PackageItemInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.pm.ResolveInfo.DisplayNameComparator;

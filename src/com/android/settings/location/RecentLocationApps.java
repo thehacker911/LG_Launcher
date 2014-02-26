@@ -1,11 +1,9 @@
 package com.android.settings.location;
 
-import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.AppOpsManager;
 import android.app.AppOpsManager.OpEntry;
 import android.app.AppOpsManager.PackageOps;
-import android.content.ContextWrapper;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;

@@ -1,13 +1,11 @@
 package com.android.settings;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.app.Dialog;
 import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.ContentValues;
-import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
@@ -22,11 +20,10 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceActivity;
-import android.preference.TwoStatePreference;
+import android.preference.PreferenceScreen;
 import android.provider.Telephony.Carriers;
 import android.telephony.TelephonyManager;
 import android.util.Log;
-import android.view.ContextThemeWrapper;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;

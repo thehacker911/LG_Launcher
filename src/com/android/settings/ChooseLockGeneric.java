@@ -1,7 +1,6 @@
 package com.android.settings;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.app.PendingIntent;
 import android.app.admin.DevicePolicyManager;
 import android.content.Intent;
@@ -11,8 +10,6 @@ import android.os.UserHandle;
 import android.os.UserManager;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
-import android.preference.PreferenceFragment;
-import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
 import android.security.KeyStore;
 import android.util.EventLog;

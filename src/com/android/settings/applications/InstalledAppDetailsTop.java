@@ -1,6 +1,5 @@
 package com.android.settings.applications;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.preference.PreferenceActivity;
 

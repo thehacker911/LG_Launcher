@@ -1,6 +1,5 @@
 package com.android.settings;
 
-import android.app.Activity;
 import android.util.Log;
 
 public class SubSettings extends Settings

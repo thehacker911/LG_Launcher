@@ -1,11 +1,8 @@
 package com.android.settings.wifi;
 
-import android.app.Activity;
-import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.content.res.Resources.Theme;
-import android.view.ContextThemeWrapper;
 import com.android.settings.ButtonBarHandler;
 
 public class WifiSetupActivity extends WifiPickerActivity

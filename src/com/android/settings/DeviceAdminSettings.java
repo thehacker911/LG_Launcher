@@ -1,14 +1,12 @@
 package com.android.settings;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.app.ListFragment;
 import android.app.admin.DeviceAdminInfo;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
-import android.content.ContextWrapper;
 import android.content.Intent;
-import android.content.pm.PackageItemInfo;
+import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources.NotFoundException;
@@ -19,7 +17,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;

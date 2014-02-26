@@ -1,9 +1,7 @@
 package com.android.settings;
 
-import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Resources;
@@ -12,14 +10,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.preference.CheckBoxPreference;
-import android.preference.DialogPreference;
-import android.preference.EditTextPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceScreen;
-import android.preference.TwoStatePreference;
 import android.util.Log;
-import android.view.ContextThemeWrapper;
 import android.widget.EditText;
 import android.widget.Toast;
 import com.android.internal.telephony.IccCard;

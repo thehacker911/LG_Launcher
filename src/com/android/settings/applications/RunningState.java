@@ -9,7 +9,6 @@ import android.app.IActivityManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
-import android.content.pm.ComponentInfo;
 import android.content.pm.IPackageManager;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageItemInfo;

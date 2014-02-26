@@ -2,7 +2,6 @@ package com.android.settings.location;
 
 import android.content.Context;
 import android.preference.CheckBoxPreference;
-import android.preference.Preference;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TextView;

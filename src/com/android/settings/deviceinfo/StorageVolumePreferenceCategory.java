@@ -17,7 +17,6 @@ import android.os.storage.StorageManager;
 import android.os.storage.StorageVolume;
 import android.preference.Preference;
 import android.preference.PreferenceCategory;
-import android.preference.PreferenceGroup;
 import android.provider.MediaStore.Images.Media;
 import android.text.format.Formatter;
 import android.util.SparseLongArray;

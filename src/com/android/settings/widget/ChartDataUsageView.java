@@ -11,7 +11,6 @@ import android.text.TextUtils;
 import android.text.format.Time;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import android.view.View;
 import com.android.internal.util.Objects;
 import java.util.Arrays;
 import java.util.Calendar;

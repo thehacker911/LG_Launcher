@@ -1,11 +1,10 @@
 package com.android.settings;
 
-import android.app.Activity;
 import android.app.LauncherActivity;
 import android.app.LauncherActivity.ListItem;
 import android.content.Intent;
 import android.content.Intent.ShortcutIconResource;
-import android.content.pm.PackageItemInfo;
+import android.content.pm.ActivityInfo;
 import android.content.pm.ResolveInfo;
 import android.view.View;
 import android.widget.ListView;

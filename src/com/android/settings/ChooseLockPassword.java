@@ -2,7 +2,6 @@ package com.android.settings;
 
 import android.app.Activity;
 import android.app.Fragment;
-import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.inputmethodservice.KeyboardView;
@@ -307,17 +306,17 @@ public class ChooseLockPassword extends PreferenceActivity
         {
           i3 = 1;
           if (327680 != this.mRequestedQuality)
-            break label635;
+            break label636;
         }
-        label635: for (int i4 = 1; ; i4 = 0)
+        label636: for (int i4 = 1; ; i4 = 0)
         {
           if (((i3 == 0) && (i4 == 0)) || (i != 0))
-            break label641;
+            break label642;
           return getString(2131427684);
           i3 = 0;
           break;
         }
-        label641: if ((i4 != 0) && (j == 0))
+        label642: if ((i4 != 0) && (j == 0))
           return getString(2131427685);
       }
       if (this.mLockPatternUtils.checkPasswordHistory(paramString))

@@ -1,10 +1,8 @@
 package com.android.settings.accessibility;
 
-import android.app.Fragment;
 import android.content.ContentResolver;
 import android.os.Bundle;
 import android.provider.Settings.Global;
-import com.android.settings.SettingsPreferenceFragment;
 
 public class ToggleGlobalGesturePreferenceFragment extends ToggleFeaturePreferenceFragment
 {

@@ -9,8 +9,6 @@ import android.net.ConnectivityManager;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
 import android.preference.CheckBoxPreference;
-import android.preference.Preference;
-import android.preference.TwoStatePreference;
 import android.provider.Settings.Global;
 import android.provider.Settings.SettingNotFoundException;
 import java.util.ArrayList;

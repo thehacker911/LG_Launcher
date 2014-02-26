@@ -1,15 +1,12 @@
 package com.android.settings.bluetooth;
 
-import android.app.Fragment;
 import android.bluetooth.BluetoothDevice;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceCategory;
-import android.preference.PreferenceFragment;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
 import android.util.Log;
-import com.android.settings.ProgressCategory;
 import com.android.settings.RestrictedSettingsFragment;
 import java.util.Collection;
 import java.util.Iterator;

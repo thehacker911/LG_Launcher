@@ -2,7 +2,6 @@ package com.android.settings.bluetooth;
 
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface.OnClickListener;
 import android.widget.Toast;

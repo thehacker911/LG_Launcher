@@ -1,25 +1,21 @@
 package com.android.settings.inputmethod;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
-import android.app.Dialog;
-import android.app.Fragment;
 import android.content.ActivityNotFoundException;
-import android.content.ContextWrapper;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
-import android.content.pm.ComponentInfo;
+import android.content.pm.ServiceInfo;
 import android.content.res.Resources;
 import android.preference.Preference;
 import android.text.TextUtils;
-import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.textservice.SpellCheckerInfo;
 import android.view.textservice.SpellCheckerSubtype;
 import android.view.textservice.TextServicesManager;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;

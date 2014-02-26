@@ -4,8 +4,6 @@ import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
-import android.preference.DialogPreference;
-import android.preference.Preference;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;

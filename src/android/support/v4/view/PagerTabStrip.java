@@ -12,6 +12,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewConfiguration;
+import android.widget.TextView;
 
 public class PagerTabStrip extends PagerTitleStrip
 {

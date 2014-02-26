@@ -1,7 +1,6 @@
 package com.android.settings;
 
 import android.content.Context;
-import android.preference.DialogPreference;
 import android.preference.ListPreference;
 import android.util.AttributeSet;
 

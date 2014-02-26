@@ -1,10 +1,6 @@
 package com.android.settings.location;
 
-import android.preference.Preference;
-import android.preference.PreferenceFragment;
-import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
-import android.preference.TwoStatePreference;
 
 public class LocationMode extends LocationSettingsBase
   implements RadioButtonPreference.OnClickListener

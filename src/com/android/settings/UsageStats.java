@@ -1,8 +1,7 @@
 package com.android.settings;
 
 import android.app.Activity;
-import android.content.ContextWrapper;
-import android.content.pm.PackageItemInfo;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;

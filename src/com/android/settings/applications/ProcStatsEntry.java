@@ -2,7 +2,6 @@ package com.android.settings.applications;
 
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
-import android.content.pm.PackageItemInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Parcel;
@@ -12,7 +11,6 @@ import android.util.ArrayMap;
 import android.util.Log;
 import com.android.internal.app.ProcessMap;
 import com.android.internal.app.ProcessStats;
-import com.android.internal.app.ProcessStats.DurationsTable;
 import com.android.internal.app.ProcessStats.PackageState;
 import com.android.internal.app.ProcessStats.ProcessDataCollection;
 import com.android.internal.app.ProcessStats.ProcessState;
@@ -143,7 +141,7 @@ public final class ProcStatsEntry
       this.mBestTargetPackage = ((String)this.mPackages.get(0));
     }
     ArrayList localArrayList1;
-    label585: label864: label876: 
+    label584: label863: label875: 
     do
     {
       return;
@@ -183,19 +181,19 @@ public final class ProcStatsEntry
         if (j < localArrayList1.size())
         {
           if (((ProcStatsEntry)localArrayList1.get(j)).mWeight >= l1 / 2L)
-            break label708;
+            break label707;
           if (DEBUG)
             Log.d("ProcStatsEntry", "Eval pkg of " + this.mName + ": pkg " + ((ProcStatsEntry)localArrayList1.get(j)).mPackage + " weight " + ((ProcStatsEntry)localArrayList1.get(j)).mWeight + " too small");
         }
         while (true)
         {
           j++;
-          break label585;
+          break label584;
           break;
           try
           {
             if (paramPackageManager.getApplicationInfo(((ProcStatsEntry)localArrayList1.get(j)).mPackage, 0).icon != 0)
-              break label864;
+              break label863;
             if (!DEBUG)
               continue;
             Log.d("ProcStatsEntry", "Eval pkg of " + this.mName + ": pkg " + ((ProcStatsEntry)localArrayList1.get(j)).mPackage + " has no icon");
@@ -244,14 +242,14 @@ public final class ProcStatsEntry
               else
               {
                 if (l3 <= l2)
-                  break label1189;
+                  break label1188;
                 if (DEBUG)
                   Log.d("ProcStatsEntry", "Eval pkg of " + this.mName + ": pkg " + ((ProcStatsEntry)localArrayList1.get(j)).mPackage + " new best run time " + l3);
                 this.mBestTargetPackage = ((ProcStatsEntry)localArrayList1.get(j)).mPackage;
                 l2 = l3;
                 break;
                 k++;
-                break label876;
+                break label875;
               }
               i1++;
             }
@@ -262,8 +260,8 @@ public final class ProcStatsEntry
       }
     }
     while (localArrayList1.size() != 1);
-    label708: this.mBestTargetPackage = ((ProcStatsEntry)localArrayList1.get(0)).mPackage;
-    label1189:
+    label707: this.mBestTargetPackage = ((ProcStatsEntry)localArrayList1.get(0)).mPackage;
+    label1188:
   }
 
   public void retrieveUiData(PackageManager paramPackageManager)

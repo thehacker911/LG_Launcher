@@ -2,12 +2,10 @@ package com.android.settings;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.preference.DialogPreference;
 import android.preference.EditTextPreference;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 
 class EditPinPreference extends EditTextPreference
 {

@@ -1,10 +1,8 @@
 package com.android.settings.deviceinfo;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.hardware.usb.UsbManager;
@@ -12,10 +10,7 @@ import android.os.Bundle;
 import android.os.UserManager;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
-import android.preference.PreferenceFragment;
-import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
-import android.preference.TwoStatePreference;
 import android.util.Log;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;

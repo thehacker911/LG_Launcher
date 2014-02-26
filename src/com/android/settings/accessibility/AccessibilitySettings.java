@@ -5,19 +5,16 @@ import android.app.Activity;
 import android.app.ActivityManagerNative;
 import android.app.AlertDialog.Builder;
 import android.app.Dialog;
-import android.app.Fragment;
 import android.app.IActivityManager;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-import android.content.pm.PackageItemInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.pm.ServiceInfo;
@@ -33,17 +30,13 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceCategory;
-import android.preference.PreferenceFragment;
-import android.preference.PreferenceGroup;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
-import android.preference.TwoStatePreference;
 import android.provider.Settings.Global;
 import android.provider.Settings.Secure;
 import android.text.TextUtils;
 import android.text.TextUtils.SimpleStringSplitter;
 import android.util.Log;
-import android.view.ContextThemeWrapper;
 import android.view.KeyCharacterMap;
 import android.view.View;
 import android.view.accessibility.AccessibilityManager;
@@ -400,8 +393,8 @@ public class AccessibilitySettings extends SettingsPreferenceFragment
       boolean bool1;
       boolean bool3;
       label76: boolean bool2;
-      label106: int i;
-      label182: label197: int j;
+      label105: int i;
+      label181: label196: int j;
       if (this.mCurConfig.fontScale == 1.3F)
       {
         bool1 = true;
@@ -409,37 +402,37 @@ public class AccessibilitySettings extends SettingsPreferenceFragment
         if ((KeyCharacterMap.deviceHasKey(26)) && (Utils.isVoiceCapable(getActivity())))
         {
           if (Settings.Secure.getInt(getContentResolver(), "incall_power_button_behavior", 1) != 2)
-            break label267;
+            break label266;
           bool3 = true;
           this.mTogglePowerButtonEndsCallPreference.setChecked(bool3);
         }
         updateLockScreenRotationCheckbox();
         if (Settings.Secure.getInt(getContentResolver(), "speak_password", 0) == 0)
-          break label273;
+          break label272;
         bool2 = true;
         this.mToggleSpeakPasswordPreference.setChecked(bool2);
         String str = String.valueOf(Settings.Secure.getInt(getContentResolver(), "long_press_timeout", this.mLongPressTimeoutDefault));
         this.mSelectLongPressTimeoutPreference.setValue(str);
         this.mSelectLongPressTimeoutPreference.setSummary((CharSequence)this.mLongPressTimeoutValuetoTitleMap.get(str));
         if (Settings.Secure.getInt(getContentResolver(), "accessibility_captioning_enabled", 0) != 1)
-          break label279;
+          break label278;
         i = 1;
         if (i == 0)
-          break label285;
+          break label284;
         this.mCaptioningPreferenceScreen.setSummary(2131428648);
         if (Settings.Secure.getInt(getContentResolver(), "accessibility_display_magnification_enabled", 0) != 1)
-          break label298;
+          break label297;
         j = 1;
-        label214: if (j == 0)
-          break label304;
+        label213: if (j == 0)
+          break label303;
         this.mDisplayMagnificationPreferenceScreen.setSummary(2131428648);
-        label229: if (Settings.Global.getInt(getContentResolver(), "enable_accessibility_global_gesture_enabled", 0) != 1)
-          break label317;
+        label228: if (Settings.Global.getInt(getContentResolver(), "enable_accessibility_global_gesture_enabled", 0) != 1)
+          break label316;
       }
-      label267: label273: label279: label285: label298: label304: label317: for (int k = 1; ; k = 0)
+      label266: label272: label278: label284: label297: label303: label316: for (int k = 1; ; k = 0)
       {
         if (k == 0)
-          break label323;
+          break label322;
         this.mGlobalGesturePreferenceScreen.setSummary(2131428637);
         return;
         bool1 = false;
@@ -447,17 +440,17 @@ public class AccessibilitySettings extends SettingsPreferenceFragment
         bool3 = false;
         break label76;
         bool2 = false;
-        break label106;
+        break label105;
         i = 0;
-        break label182;
+        break label181;
         this.mCaptioningPreferenceScreen.setSummary(2131428649);
-        break label197;
+        break label196;
         j = 0;
-        break label214;
+        break label213;
         this.mDisplayMagnificationPreferenceScreen.setSummary(2131428649);
-        break label229;
+        break label228;
       }
-      label323: this.mGlobalGesturePreferenceScreen.setSummary(2131428638);
+      label322: this.mGlobalGesturePreferenceScreen.setSummary(2131428638);
       return;
     }
     catch (RemoteException localRemoteException)

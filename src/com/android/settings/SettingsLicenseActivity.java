@@ -3,9 +3,7 @@ package com.android.settings;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
-import android.app.Dialog;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnDismissListener;
 import android.os.Bundle;
@@ -149,7 +147,7 @@ public class SettingsLicenseActivity extends Activity
       //   63: astore_1
       //   64: aload_1
       //   65: aload 15
-      //   67: invokevirtual 60	java/io/Reader:read	([C)I
+      //   67: invokevirtual 58	java/io/InputStreamReader:read	([C)I
       //   70: istore 17
       //   72: iload 17
       //   74: iflt +163 -> 237
@@ -157,47 +155,47 @@ public class SettingsLicenseActivity extends Activity
       //   78: aload 15
       //   80: iconst_0
       //   81: iload 17
-      //   83: invokevirtual 64	java/lang/StringBuilder:append	([CII)Ljava/lang/StringBuilder;
+      //   83: invokevirtual 62	java/lang/StringBuilder:append	([CII)Ljava/lang/StringBuilder;
       //   86: pop
       //   87: goto -23 -> 64
       //   90: astore 12
-      //   92: ldc 66
+      //   92: ldc 64
       //   94: new 30	java/lang/StringBuilder
       //   97: dup
-      //   98: invokespecial 67	java/lang/StringBuilder:<init>	()V
-      //   101: ldc 69
-      //   103: invokevirtual 72	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      //   98: invokespecial 65	java/lang/StringBuilder:<init>	()V
+      //   101: ldc 67
+      //   103: invokevirtual 70	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
       //   106: aload_0
       //   107: getfield 21	com/android/settings/SettingsLicenseActivity$LicenseFileLoader:mFileName	Ljava/lang/String;
-      //   110: invokevirtual 72	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-      //   113: invokevirtual 76	java/lang/StringBuilder:toString	()Ljava/lang/String;
+      //   110: invokevirtual 70	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      //   113: invokevirtual 74	java/lang/StringBuilder:toString	()Ljava/lang/String;
       //   116: aload 12
-      //   118: invokestatic 82	android/util/Log:e	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+      //   118: invokestatic 80	android/util/Log:e	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
       //   121: pop
       //   122: iconst_1
       //   123: istore 7
       //   125: aload_1
       //   126: ifnull +7 -> 133
       //   129: aload_1
-      //   130: invokevirtual 85	java/io/InputStreamReader:close	()V
+      //   130: invokevirtual 83	java/io/InputStreamReader:close	()V
       //   133: iload 7
       //   135: ifne +46 -> 181
       //   138: aload_2
-      //   139: invokestatic 91	android/text/TextUtils:isEmpty	(Ljava/lang/CharSequence;)Z
+      //   139: invokestatic 89	android/text/TextUtils:isEmpty	(Ljava/lang/CharSequence;)Z
       //   142: ifeq +39 -> 181
-      //   145: ldc 66
+      //   145: ldc 64
       //   147: new 30	java/lang/StringBuilder
       //   150: dup
-      //   151: invokespecial 67	java/lang/StringBuilder:<init>	()V
-      //   154: ldc 93
-      //   156: invokevirtual 72	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      //   151: invokespecial 65	java/lang/StringBuilder:<init>	()V
+      //   154: ldc 91
+      //   156: invokevirtual 70	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
       //   159: aload_0
       //   160: getfield 21	com/android/settings/SettingsLicenseActivity$LicenseFileLoader:mFileName	Ljava/lang/String;
-      //   163: invokevirtual 72	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-      //   166: ldc 95
-      //   168: invokevirtual 72	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-      //   171: invokevirtual 76	java/lang/StringBuilder:toString	()Ljava/lang/String;
-      //   174: invokestatic 98	android/util/Log:e	(Ljava/lang/String;Ljava/lang/String;)I
+      //   163: invokevirtual 70	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      //   166: ldc 93
+      //   168: invokevirtual 70	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      //   171: invokevirtual 74	java/lang/StringBuilder:toString	()Ljava/lang/String;
+      //   174: invokestatic 96	android/util/Log:e	(Ljava/lang/String;Ljava/lang/String;)I
       //   177: pop
       //   178: iconst_3
       //   179: istore 7
@@ -205,25 +203,25 @@ public class SettingsLicenseActivity extends Activity
       //   182: getfield 23	com/android/settings/SettingsLicenseActivity$LicenseFileLoader:mHandler	Landroid/os/Handler;
       //   185: iload 7
       //   187: aconst_null
-      //   188: invokevirtual 104	android/os/Handler:obtainMessage	(ILjava/lang/Object;)Landroid/os/Message;
+      //   188: invokevirtual 102	android/os/Handler:obtainMessage	(ILjava/lang/Object;)Landroid/os/Message;
       //   191: astore 9
       //   193: iload 7
       //   195: ifne +12 -> 207
       //   198: aload 9
       //   200: aload_2
-      //   201: invokevirtual 76	java/lang/StringBuilder:toString	()Ljava/lang/String;
-      //   204: putfield 110	android/os/Message:obj	Ljava/lang/Object;
+      //   201: invokevirtual 74	java/lang/StringBuilder:toString	()Ljava/lang/String;
+      //   204: putfield 108	android/os/Message:obj	Ljava/lang/Object;
       //   207: aload_0
       //   208: getfield 23	com/android/settings/SettingsLicenseActivity$LicenseFileLoader:mHandler	Landroid/os/Handler;
       //   211: aload 9
-      //   213: invokevirtual 114	android/os/Handler:sendMessage	(Landroid/os/Message;)Z
+      //   213: invokevirtual 112	android/os/Handler:sendMessage	(Landroid/os/Message;)Z
       //   216: pop
       //   217: return
-      //   218: new 116	java/io/FileReader
+      //   218: new 114	java/io/FileReader
       //   221: dup
       //   222: aload_0
       //   223: getfield 21	com/android/settings/SettingsLicenseActivity$LicenseFileLoader:mFileName	Ljava/lang/String;
-      //   226: invokespecial 117	java/io/FileReader:<init>	(Ljava/lang/String;)V
+      //   226: invokespecial 115	java/io/FileReader:<init>	(Ljava/lang/String;)V
       //   229: astore 20
       //   231: aload 20
       //   233: astore_1
@@ -233,7 +231,7 @@ public class SettingsLicenseActivity extends Activity
       //   240: aload_1
       //   241: ifnull -108 -> 133
       //   244: aload_1
-      //   245: invokevirtual 85	java/io/InputStreamReader:close	()V
+      //   245: invokevirtual 83	java/io/InputStreamReader:close	()V
       //   248: iconst_0
       //   249: istore 7
       //   251: goto -118 -> 133
@@ -242,25 +240,25 @@ public class SettingsLicenseActivity extends Activity
       //   257: istore 7
       //   259: goto -126 -> 133
       //   262: astore 5
-      //   264: ldc 66
+      //   264: ldc 64
       //   266: new 30	java/lang/StringBuilder
       //   269: dup
-      //   270: invokespecial 67	java/lang/StringBuilder:<init>	()V
-      //   273: ldc 119
-      //   275: invokevirtual 72	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      //   270: invokespecial 65	java/lang/StringBuilder:<init>	()V
+      //   273: ldc 117
+      //   275: invokevirtual 70	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
       //   278: aload_0
       //   279: getfield 21	com/android/settings/SettingsLicenseActivity$LicenseFileLoader:mFileName	Ljava/lang/String;
-      //   282: invokevirtual 72	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-      //   285: invokevirtual 76	java/lang/StringBuilder:toString	()Ljava/lang/String;
+      //   282: invokevirtual 70	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      //   285: invokevirtual 74	java/lang/StringBuilder:toString	()Ljava/lang/String;
       //   288: aload 5
-      //   290: invokestatic 82	android/util/Log:e	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+      //   290: invokestatic 80	android/util/Log:e	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
       //   293: pop
       //   294: iconst_2
       //   295: istore 7
       //   297: aload_1
       //   298: ifnull -165 -> 133
       //   301: aload_1
-      //   302: invokevirtual 85	java/io/InputStreamReader:close	()V
+      //   302: invokevirtual 83	java/io/InputStreamReader:close	()V
       //   305: goto -172 -> 133
       //   308: astore 8
       //   310: goto -177 -> 133
@@ -268,7 +266,7 @@ public class SettingsLicenseActivity extends Activity
       //   314: aload_1
       //   315: ifnull +7 -> 322
       //   318: aload_1
-      //   319: invokevirtual 85	java/io/InputStreamReader:close	()V
+      //   319: invokevirtual 83	java/io/InputStreamReader:close	()V
       //   322: aload_3
       //   323: athrow
       //   324: astore 14

@@ -1,10 +1,7 @@
 package com.android.settings;
 
-import android.app.Activity;
 import android.appwidget.AppWidgetManager;
 import android.content.ComponentName;
-import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
@@ -12,12 +9,9 @@ import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.TextView;
 import com.android.internal.app.AlertActivity;
 import com.android.internal.app.AlertController.AlertParams;
 

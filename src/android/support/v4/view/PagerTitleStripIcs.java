@@ -3,7 +3,6 @@ package android.support.v4.view;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.content.res.Resources;
-import android.text.method.ReplacementTransformationMethod;
 import android.text.method.SingleLineTransformationMethod;
 import android.view.View;
 import android.widget.TextView;

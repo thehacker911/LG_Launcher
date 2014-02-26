@@ -3,10 +3,8 @@ package com.android.settings.location;
 import android.app.ActionBar;
 import android.app.ActionBar.LayoutParams;
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Resources;
@@ -14,15 +12,12 @@ import android.preference.Preference;
 import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceCategory;
-import android.preference.PreferenceFragment;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
 import android.util.Log;
-import android.view.ContextThemeWrapper;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.Switch;
-import android.widget.TextView;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator;
@@ -148,12 +143,12 @@ public class LocationSettings extends LocationSettingsBase
         bool2 = bool1;
         Switch localSwitch = this.mSwitch;
         if (paramBoolean)
-          break label199;
+          break label195;
         bool3 = bool1;
         localSwitch.setEnabled(bool3);
         localPreference = this.mLocationMode;
         if ((!bool2) || (paramBoolean))
-          break label205;
+          break label201;
       }
       break;
     case 0:
@@ -184,9 +179,9 @@ public class LocationSettings extends LocationSettingsBase
       break;
       bool2 = false;
       break label39;
-      label199: bool3 = false;
+      label195: bool3 = false;
       break label52;
-      label205: bool1 = false;
+      label201: bool1 = false;
     }
   }
 

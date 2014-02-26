@@ -1,9 +1,8 @@
 package com.android.settings;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
-import android.app.Dialog;
-import android.content.ContextWrapper;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnDismissListener;
 import android.content.res.Resources;
@@ -12,7 +11,6 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.SystemProperties;
 import android.text.TextUtils;
-import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;

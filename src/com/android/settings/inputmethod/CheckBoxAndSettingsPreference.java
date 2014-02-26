@@ -1,11 +1,8 @@
 package com.android.settings.inputmethod;
 
-import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.preference.CheckBoxPreference;
-import android.preference.Preference;
-import android.preference.TwoStatePreference;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.View.OnClickListener;

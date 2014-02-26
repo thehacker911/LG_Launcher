@@ -1,7 +1,6 @@
 package com.android.settings.inputmethod;
 
 import android.content.Context;
-import android.preference.TwoStatePreference;
 import android.util.AttributeSet;
 import android.view.textservice.TextServicesManager;
 

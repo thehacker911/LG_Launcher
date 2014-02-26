@@ -5,7 +5,6 @@ import android.content.res.CompatibilityInfo;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
-import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
 import android.text.Layout;
 import android.text.Layout.Alignment;

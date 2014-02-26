@@ -1,10 +1,8 @@
 package com.android.settings.deviceinfo;
 
-import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Resources;
@@ -20,7 +18,6 @@ import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
-import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
 import android.telephony.CellBroadcastMessage;
 import android.telephony.PhoneNumberUtils;
@@ -28,12 +25,10 @@ import android.telephony.PhoneStateListener;
 import android.telephony.ServiceState;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
-import android.view.ContextThemeWrapper;
 import com.android.internal.telephony.Phone;
 import com.android.internal.telephony.PhoneFactory;
 import com.android.internal.telephony.PhoneStateIntentReceiver;
 import com.android.settings.Utils;
-import java.lang.ref.Reference;
 import java.lang.ref.WeakReference;
 
 public class Status extends PreferenceActivity

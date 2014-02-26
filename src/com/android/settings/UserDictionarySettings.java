@@ -2,7 +2,6 @@ package com.android.settings;
 
 import android.app.ActionBar;
 import android.app.Activity;
-import android.app.Fragment;
 import android.app.ListFragment;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -18,8 +17,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AbsListView;
-import android.widget.AdapterView;
 import android.widget.AlphabetIndexer;
 import android.widget.ListAdapter;
 import android.widget.ListView;

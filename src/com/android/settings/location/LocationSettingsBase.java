@@ -1,10 +1,8 @@
 package com.android.settings.location;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.app.LoaderManager;
 import android.app.LoaderManager.LoaderCallbacks;
-import android.content.ContextWrapper;
 import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;

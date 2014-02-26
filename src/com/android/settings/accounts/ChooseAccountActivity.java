@@ -2,10 +2,8 @@ package com.android.settings.accounts;
 
 import android.accounts.AccountManager;
 import android.accounts.AuthenticatorDescription;
-import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.SyncAdapterType;
 import android.content.pm.PackageManager.NameNotFoundException;

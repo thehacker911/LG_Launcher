@@ -1,15 +1,13 @@
 package com.android.settings;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.Intent.ShortcutIconResource;
-import android.content.pm.ComponentInfo;
-import android.content.pm.PackageItemInfo;
+import android.content.pm.ActivityInfo;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
@@ -223,15 +221,15 @@ public class ActivityPicker extends AlertActivity
       //   39: astore 29
       //   41: aload 29
       //   43: iload_2
-      //   44: invokevirtual 58	android/graphics/drawable/ShapeDrawable:setIntrinsicWidth	(I)V
+      //   44: invokevirtual 56	android/graphics/drawable/PaintDrawable:setIntrinsicWidth	(I)V
       //   47: aload 29
       //   49: iload_3
-      //   50: invokevirtual 61	android/graphics/drawable/ShapeDrawable:setIntrinsicHeight	(I)V
+      //   50: invokevirtual 59	android/graphics/drawable/PaintDrawable:setIntrinsicHeight	(I)V
       //   53: aload_1
-      //   54: invokevirtual 67	android/graphics/drawable/Drawable:getIntrinsicWidth	()I
+      //   54: invokevirtual 65	android/graphics/drawable/Drawable:getIntrinsicWidth	()I
       //   57: istore 7
       //   59: aload_1
-      //   60: invokevirtual 70	android/graphics/drawable/Drawable:getIntrinsicHeight	()I
+      //   60: invokevirtual 68	android/graphics/drawable/Drawable:getIntrinsicHeight	()I
       //   63: istore 8
       //   65: iload 7
       //   67: ifle +189 -> 256
@@ -259,29 +257,29 @@ public class ActivityPicker extends AlertActivity
       //   108: f2i
       //   109: istore_3
       //   110: aload_1
-      //   111: invokevirtual 73	android/graphics/drawable/Drawable:getOpacity	()I
+      //   111: invokevirtual 71	android/graphics/drawable/Drawable:getOpacity	()I
       //   114: iconst_m1
       //   115: if_icmpeq +211 -> 326
-      //   118: getstatic 79	android/graphics/Bitmap$Config:ARGB_8888	Landroid/graphics/Bitmap$Config;
+      //   118: getstatic 77	android/graphics/Bitmap$Config:ARGB_8888	Landroid/graphics/Bitmap$Config;
       //   121: astore 10
       //   123: aload_0
       //   124: getfield 41	com/android/settings/ActivityPicker$IconResizer:mIconWidth	I
       //   127: aload_0
       //   128: getfield 43	com/android/settings/ActivityPicker$IconResizer:mIconHeight	I
       //   131: aload 10
-      //   133: invokestatic 85	android/graphics/Bitmap:createBitmap	(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+      //   133: invokestatic 83	android/graphics/Bitmap:createBitmap	(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
       //   136: astore 11
       //   138: aload_0
       //   139: getfield 28	com/android/settings/ActivityPicker$IconResizer:mCanvas	Landroid/graphics/Canvas;
       //   142: astore 12
       //   144: aload 12
       //   146: aload 11
-      //   148: invokevirtual 89	android/graphics/Canvas:setBitmap	(Landroid/graphics/Bitmap;)V
+      //   148: invokevirtual 87	android/graphics/Canvas:setBitmap	(Landroid/graphics/Bitmap;)V
       //   151: aload_0
       //   152: getfield 23	com/android/settings/ActivityPicker$IconResizer:mOldBounds	Landroid/graphics/Rect;
       //   155: aload_1
-      //   156: invokevirtual 93	android/graphics/drawable/Drawable:getBounds	()Landroid/graphics/Rect;
-      //   159: invokevirtual 97	android/graphics/Rect:set	(Landroid/graphics/Rect;)V
+      //   156: invokevirtual 91	android/graphics/drawable/Drawable:getBounds	()Landroid/graphics/Rect;
+      //   159: invokevirtual 95	android/graphics/Rect:set	(Landroid/graphics/Rect;)V
       //   162: aload_0
       //   163: getfield 41	com/android/settings/ActivityPicker$IconResizer:mIconWidth	I
       //   166: iload_2
@@ -309,47 +307,47 @@ public class ActivityPicker extends AlertActivity
       //   197: iload 14
       //   199: iload 15
       //   201: iload 16
-      //   203: invokevirtual 101	android/graphics/drawable/Drawable:setBounds	(IIII)V
+      //   203: invokevirtual 99	android/graphics/drawable/Drawable:setBounds	(IIII)V
       //   206: aload_1
       //   207: aload 12
-      //   209: invokevirtual 105	android/graphics/drawable/Drawable:draw	(Landroid/graphics/Canvas;)V
+      //   209: invokevirtual 103	android/graphics/drawable/Drawable:draw	(Landroid/graphics/Canvas;)V
       //   212: aload_0
       //   213: getfield 23	com/android/settings/ActivityPicker$IconResizer:mOldBounds	Landroid/graphics/Rect;
       //   216: astore 17
       //   218: aload_1
       //   219: aload 17
-      //   221: invokevirtual 107	android/graphics/drawable/Drawable:setBounds	(Landroid/graphics/Rect;)V
-      //   224: new 109	android/graphics/drawable/BitmapDrawable
+      //   221: invokevirtual 105	android/graphics/drawable/Drawable:setBounds	(Landroid/graphics/Rect;)V
+      //   224: new 107	android/graphics/drawable/BitmapDrawable
       //   227: dup
       //   228: aload 11
-      //   230: invokespecial 111	android/graphics/drawable/BitmapDrawable:<init>	(Landroid/graphics/Bitmap;)V
+      //   230: invokespecial 109	android/graphics/drawable/BitmapDrawable:<init>	(Landroid/graphics/Bitmap;)V
       //   233: astore 18
       //   235: aload 18
-      //   237: checkcast 109	android/graphics/drawable/BitmapDrawable
+      //   237: checkcast 107	android/graphics/drawable/BitmapDrawable
       //   240: aload_0
       //   241: getfield 39	com/android/settings/ActivityPicker$IconResizer:mMetrics	Landroid/util/DisplayMetrics;
-      //   244: invokevirtual 115	android/graphics/drawable/BitmapDrawable:setTargetDensity	(Landroid/util/DisplayMetrics;)V
+      //   244: invokevirtual 113	android/graphics/drawable/BitmapDrawable:setTargetDensity	(Landroid/util/DisplayMetrics;)V
       //   247: aload 12
       //   249: aconst_null
-      //   250: invokevirtual 89	android/graphics/Canvas:setBitmap	(Landroid/graphics/Bitmap;)V
+      //   250: invokevirtual 87	android/graphics/Canvas:setBitmap	(Landroid/graphics/Bitmap;)V
       //   253: aload 18
       //   255: astore_1
       //   256: aload_1
       //   257: areturn
       //   258: aload_1
-      //   259: instanceof 109
+      //   259: instanceof 107
       //   262: ifeq -209 -> 53
       //   265: aload_1
-      //   266: checkcast 109	android/graphics/drawable/BitmapDrawable
+      //   266: checkcast 107	android/graphics/drawable/BitmapDrawable
       //   269: astore 6
       //   271: aload 6
-      //   273: invokevirtual 119	android/graphics/drawable/BitmapDrawable:getBitmap	()Landroid/graphics/Bitmap;
-      //   276: invokevirtual 122	android/graphics/Bitmap:getDensity	()I
+      //   273: invokevirtual 117	android/graphics/drawable/BitmapDrawable:getBitmap	()Landroid/graphics/Bitmap;
+      //   276: invokevirtual 120	android/graphics/Bitmap:getDensity	()I
       //   279: ifne -226 -> 53
       //   282: aload 6
       //   284: aload_0
       //   285: getfield 39	com/android/settings/ActivityPicker$IconResizer:mMetrics	Landroid/util/DisplayMetrics;
-      //   288: invokevirtual 115	android/graphics/drawable/BitmapDrawable:setTargetDensity	(Landroid/util/DisplayMetrics;)V
+      //   288: invokevirtual 113	android/graphics/drawable/BitmapDrawable:setTargetDensity	(Landroid/util/DisplayMetrics;)V
       //   291: goto -238 -> 53
       //   294: astore 5
       //   296: new 49	com/android/settings/ActivityPicker$EmptyDrawable
@@ -369,7 +367,7 @@ public class ActivityPicker extends AlertActivity
       //   321: f2i
       //   322: istore_2
       //   323: goto -213 -> 110
-      //   326: getstatic 125	android/graphics/Bitmap$Config:RGB_565	Landroid/graphics/Bitmap$Config;
+      //   326: getstatic 123	android/graphics/Bitmap$Config:RGB_565	Landroid/graphics/Bitmap$Config;
       //   329: astore 10
       //   331: goto -208 -> 123
       //   334: iload 7
@@ -378,26 +376,26 @@ public class ActivityPicker extends AlertActivity
       //   340: iload 8
       //   342: iload_3
       //   343: if_icmpge -87 -> 256
-      //   346: getstatic 79	android/graphics/Bitmap$Config:ARGB_8888	Landroid/graphics/Bitmap$Config;
+      //   346: getstatic 77	android/graphics/Bitmap$Config:ARGB_8888	Landroid/graphics/Bitmap$Config;
       //   349: astore 21
       //   351: aload_0
       //   352: getfield 41	com/android/settings/ActivityPicker$IconResizer:mIconWidth	I
       //   355: aload_0
       //   356: getfield 43	com/android/settings/ActivityPicker$IconResizer:mIconHeight	I
       //   359: aload 21
-      //   361: invokestatic 85	android/graphics/Bitmap:createBitmap	(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+      //   361: invokestatic 83	android/graphics/Bitmap:createBitmap	(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
       //   364: astore 22
       //   366: aload_0
       //   367: getfield 28	com/android/settings/ActivityPicker$IconResizer:mCanvas	Landroid/graphics/Canvas;
       //   370: astore 23
       //   372: aload 23
       //   374: aload 22
-      //   376: invokevirtual 89	android/graphics/Canvas:setBitmap	(Landroid/graphics/Bitmap;)V
+      //   376: invokevirtual 87	android/graphics/Canvas:setBitmap	(Landroid/graphics/Bitmap;)V
       //   379: aload_0
       //   380: getfield 23	com/android/settings/ActivityPicker$IconResizer:mOldBounds	Landroid/graphics/Rect;
       //   383: aload_1
-      //   384: invokevirtual 93	android/graphics/drawable/Drawable:getBounds	()Landroid/graphics/Rect;
-      //   387: invokevirtual 97	android/graphics/Rect:set	(Landroid/graphics/Rect;)V
+      //   384: invokevirtual 91	android/graphics/drawable/Drawable:getBounds	()Landroid/graphics/Rect;
+      //   387: invokevirtual 95	android/graphics/Rect:set	(Landroid/graphics/Rect;)V
       //   390: iload_2
       //   391: iload 7
       //   393: isub
@@ -423,29 +421,29 @@ public class ActivityPicker extends AlertActivity
       //   423: iload 25
       //   425: iload 26
       //   427: iload 27
-      //   429: invokevirtual 101	android/graphics/drawable/Drawable:setBounds	(IIII)V
+      //   429: invokevirtual 99	android/graphics/drawable/Drawable:setBounds	(IIII)V
       //   432: aload_1
       //   433: aload 23
-      //   435: invokevirtual 105	android/graphics/drawable/Drawable:draw	(Landroid/graphics/Canvas;)V
+      //   435: invokevirtual 103	android/graphics/drawable/Drawable:draw	(Landroid/graphics/Canvas;)V
       //   438: aload_0
       //   439: getfield 23	com/android/settings/ActivityPicker$IconResizer:mOldBounds	Landroid/graphics/Rect;
       //   442: astore 28
       //   444: aload_1
       //   445: aload 28
-      //   447: invokevirtual 107	android/graphics/drawable/Drawable:setBounds	(Landroid/graphics/Rect;)V
-      //   450: new 109	android/graphics/drawable/BitmapDrawable
+      //   447: invokevirtual 105	android/graphics/drawable/Drawable:setBounds	(Landroid/graphics/Rect;)V
+      //   450: new 107	android/graphics/drawable/BitmapDrawable
       //   453: dup
       //   454: aload 22
-      //   456: invokespecial 111	android/graphics/drawable/BitmapDrawable:<init>	(Landroid/graphics/Bitmap;)V
+      //   456: invokespecial 109	android/graphics/drawable/BitmapDrawable:<init>	(Landroid/graphics/Bitmap;)V
       //   459: astore 18
       //   461: aload 18
-      //   463: checkcast 109	android/graphics/drawable/BitmapDrawable
+      //   463: checkcast 107	android/graphics/drawable/BitmapDrawable
       //   466: aload_0
       //   467: getfield 39	com/android/settings/ActivityPicker$IconResizer:mMetrics	Landroid/util/DisplayMetrics;
-      //   470: invokevirtual 115	android/graphics/drawable/BitmapDrawable:setTargetDensity	(Landroid/util/DisplayMetrics;)V
+      //   470: invokevirtual 113	android/graphics/drawable/BitmapDrawable:setTargetDensity	(Landroid/util/DisplayMetrics;)V
       //   473: aload 23
       //   475: aconst_null
-      //   476: invokevirtual 89	android/graphics/Canvas:setBitmap	(Landroid/graphics/Bitmap;)V
+      //   476: invokevirtual 87	android/graphics/Canvas:setBitmap	(Landroid/graphics/Bitmap;)V
       //   479: aload 18
       //   481: astore_1
       //   482: goto -226 -> 256

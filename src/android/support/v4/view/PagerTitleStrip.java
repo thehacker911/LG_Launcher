@@ -10,12 +10,10 @@ import android.os.Build.VERSION;
 import android.text.TextUtils.TruncateAt;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
-import android.view.View;
 import android.view.View.MeasureSpec;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.widget.TextView;
-import java.lang.ref.Reference;
 import java.lang.ref.WeakReference;
 
 public class PagerTitleStrip extends ViewGroup

@@ -1,18 +1,14 @@
 package com.android.settings;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.UserManager;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
-import android.preference.PreferenceFragment;
-import android.preference.TwoStatePreference;
 import java.util.HashSet;
 
 public class RestrictedSettingsFragment extends SettingsPreferenceFragment

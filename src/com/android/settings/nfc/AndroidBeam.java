@@ -8,14 +8,12 @@ import android.content.res.Resources;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
-import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.Switch;
-import android.widget.TextView;
 
 public class AndroidBeam extends Fragment
   implements CompoundButton.OnCheckedChangeListener

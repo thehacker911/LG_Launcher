@@ -8,9 +8,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.content.pm.ApplicationInfo;
-import android.content.pm.ComponentInfo;
-import android.content.pm.PackageItemInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
@@ -36,7 +35,6 @@ import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AbsListView;
 import android.widget.ListView;
 import java.io.IOException;
 import java.io.InputStream;
@@ -181,101 +179,101 @@ public class Utils
     //   1: invokevirtual 57	android/content/Context:getContentResolver	()Landroid/content/ContentResolver;
     //   4: astore_1
     //   5: aload_1
-    //   6: getstatic 241	android/provider/ContactsContract$Profile:CONTENT_RAW_CONTACTS_URI	Landroid/net/Uri;
+    //   6: getstatic 239	android/provider/ContactsContract$Profile:CONTENT_RAW_CONTACTS_URI	Landroid/net/Uri;
     //   9: iconst_1
     //   10: anewarray 110	java/lang/String
     //   13: dup
     //   14: iconst_0
-    //   15: ldc 243
+    //   15: ldc 241
     //   17: aastore
-    //   18: ldc 245
+    //   18: ldc 243
     //   20: aconst_null
     //   21: aconst_null
-    //   22: invokevirtual 251	android/content/ContentResolver:query	(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    //   22: invokevirtual 249	android/content/ContentResolver:query	(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     //   25: astore_2
     //   26: aload_2
     //   27: ifnonnull +5 -> 32
     //   30: aconst_null
     //   31: areturn
     //   32: aload_2
-    //   33: invokeinterface 256 1 0
+    //   33: invokeinterface 254 1 0
     //   38: istore 4
     //   40: iload 4
     //   42: ifne +11 -> 53
     //   45: aload_2
-    //   46: invokeinterface 257 1 0
+    //   46: invokeinterface 255 1 0
     //   51: aconst_null
     //   52: areturn
     //   53: aload_2
     //   54: iconst_0
-    //   55: invokeinterface 261 2 0
+    //   55: invokeinterface 259 2 0
     //   60: lstore 5
     //   62: aload_2
-    //   63: invokeinterface 257 1 0
+    //   63: invokeinterface 255 1 0
     //   68: aload_1
     //   69: getstatic 51	android/provider/ContactsContract$Profile:CONTENT_URI	Landroid/net/Uri;
-    //   72: invokevirtual 267	android/net/Uri:buildUpon	()Landroid/net/Uri$Builder;
-    //   75: ldc_w 269
-    //   78: invokevirtual 275	android/net/Uri$Builder:appendPath	(Ljava/lang/String;)Landroid/net/Uri$Builder;
-    //   81: invokevirtual 279	android/net/Uri$Builder:build	()Landroid/net/Uri;
+    //   72: invokevirtual 265	android/net/Uri:buildUpon	()Landroid/net/Uri$Builder;
+    //   75: ldc_w 267
+    //   78: invokevirtual 273	android/net/Uri$Builder:appendPath	(Ljava/lang/String;)Landroid/net/Uri$Builder;
+    //   81: invokevirtual 277	android/net/Uri$Builder:build	()Landroid/net/Uri;
     //   84: iconst_2
     //   85: anewarray 110	java/lang/String
     //   88: dup
     //   89: iconst_0
-    //   90: ldc_w 281
+    //   90: ldc_w 279
     //   93: aastore
     //   94: dup
     //   95: iconst_1
-    //   96: ldc_w 283
+    //   96: ldc_w 281
     //   99: aastore
-    //   100: new 166	java/lang/StringBuilder
+    //   100: new 164	java/lang/StringBuilder
     //   103: dup
-    //   104: invokespecial 167	java/lang/StringBuilder:<init>	()V
-    //   107: ldc_w 285
-    //   110: invokevirtual 171	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   104: invokespecial 165	java/lang/StringBuilder:<init>	()V
+    //   107: ldc_w 283
+    //   110: invokevirtual 169	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   113: lload 5
-    //   115: invokevirtual 288	java/lang/StringBuilder:append	(J)Ljava/lang/StringBuilder;
-    //   118: invokevirtual 184	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   115: invokevirtual 286	java/lang/StringBuilder:append	(J)Ljava/lang/StringBuilder;
+    //   118: invokevirtual 182	java/lang/StringBuilder:toString	()Ljava/lang/String;
     //   121: aconst_null
     //   122: aconst_null
-    //   123: invokevirtual 251	android/content/ContentResolver:query	(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    //   123: invokevirtual 249	android/content/ContentResolver:query	(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     //   126: astore 7
     //   128: aload 7
     //   130: ifnull -100 -> 30
     //   133: aload 7
-    //   135: invokeinterface 256 1 0
+    //   135: invokeinterface 254 1 0
     //   140: istore 9
     //   142: iload 9
     //   144: ifne +21 -> 165
     //   147: aload 7
-    //   149: invokeinterface 257 1 0
+    //   149: invokeinterface 255 1 0
     //   154: aconst_null
     //   155: areturn
     //   156: astore_3
     //   157: aload_2
-    //   158: invokeinterface 257 1 0
+    //   158: invokeinterface 255 1 0
     //   163: aload_3
     //   164: athrow
     //   165: aload 7
     //   167: iconst_0
-    //   168: invokeinterface 289 2 0
+    //   168: invokeinterface 287 2 0
     //   173: astore 10
     //   175: aload 10
-    //   177: invokestatic 295	android/text/TextUtils:isEmpty	(Ljava/lang/CharSequence;)Z
+    //   177: invokestatic 293	android/text/TextUtils:isEmpty	(Ljava/lang/CharSequence;)Z
     //   180: ifeq +17 -> 197
     //   183: aload 7
     //   185: iconst_1
-    //   186: invokeinterface 289 2 0
+    //   186: invokeinterface 287 2 0
     //   191: astore 11
     //   193: aload 11
     //   195: astore 10
     //   197: aload 7
-    //   199: invokeinterface 257 1 0
+    //   199: invokeinterface 255 1 0
     //   204: aload 10
     //   206: areturn
     //   207: astore 8
     //   209: aload 7
-    //   211: invokeinterface 257 1 0
+    //   211: invokeinterface 255 1 0
     //   216: aload 8
     //   218: athrow
     //

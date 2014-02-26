@@ -9,7 +9,6 @@ import android.view.View.OnFocusChangeListener;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 public class WifiConfigUiForSetupWizardXL
   implements View.OnFocusChangeListener, WifiConfigUiBase

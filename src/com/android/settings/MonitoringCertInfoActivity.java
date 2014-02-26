@@ -12,7 +12,6 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.RemoteException;
-import android.view.ContextThemeWrapper;
 import android.view.IWindowManager;
 import android.view.Window;
 import android.view.WindowManagerGlobal;

@@ -1,14 +1,10 @@
 package com.android.settings.bluetooth;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.bluetooth.BluetoothDevice;
-import android.content.ContextWrapper;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.UserManager;
-import android.preference.PreferenceFragment;
-import com.android.settings.SettingsPreferenceFragment;
 
 public final class DevicePickerFragment extends DeviceListPreferenceFragment
 {

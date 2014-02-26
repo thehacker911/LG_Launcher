@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.media.RingtoneManager;
 import android.net.Uri;
-import android.preference.Preference;
 import android.preference.RingtonePreference;
 import android.util.AttributeSet;
 

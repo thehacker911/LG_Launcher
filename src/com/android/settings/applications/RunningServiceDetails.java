@@ -11,14 +11,10 @@ import android.app.DialogFragment;
 import android.app.Fragment;
 import android.app.PendingIntent;
 import android.content.ComponentName;
-import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
-import android.content.pm.ComponentInfo;
-import android.content.pm.PackageItemInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ProviderInfo;
@@ -266,7 +262,7 @@ public class RunningServiceDetails extends Fragment
     {
       addServicesHeader();
       if (paramServiceItem == null)
-        break label259;
+        break label258;
       localObject = paramServiceItem;
       localActiveDetail = new ActiveDetail();
       View localView = this.mInflater.inflate(2130968704, this.mAllDetails, false);
@@ -283,7 +279,7 @@ public class RunningServiceDetails extends Fragment
       localActiveDetail.mStopButton = ((Button)localView.findViewById(2131231089));
       localActiveDetail.mReportButton = ((Button)localView.findViewById(2131231090));
       if ((!paramBoolean1) || (paramMergedItem.mUserId == UserHandle.myUserId()))
-        break label265;
+        break label264;
       localTextView.setVisibility(8);
       localView.findViewById(2131230852).setVisibility(8);
     }
@@ -295,10 +291,10 @@ public class RunningServiceDetails extends Fragment
         break;
       addProcessesHeader();
       break;
-      label259: localObject = paramMergedItem;
+      label258: localObject = paramMergedItem;
       break label15;
-      label265: label315: int j;
-      label351: Button localButton2;
+      label264: label314: int j;
+      label350: Button localButton2;
       if ((paramServiceItem != null) && (paramServiceItem.mServiceInfo.descriptionRes != 0))
       {
         localTextView.setText(getActivity().getPackageManager().getText(paramServiceItem.mServiceInfo.packageName, paramServiceItem.mServiceInfo.descriptionRes, paramServiceItem.mServiceInfo.applicationInfo));
@@ -306,19 +302,19 @@ public class RunningServiceDetails extends Fragment
         Button localButton1 = localActiveDetail.mStopButton;
         Activity localActivity2 = getActivity();
         if (localActiveDetail.mManageIntent == null)
-          break label587;
+          break label586;
         j = 2131428489;
         localButton1.setText(localActivity2.getText(j));
         localActiveDetail.mReportButton.setOnClickListener(localActiveDetail);
         localActiveDetail.mReportButton.setText(17040389);
         if ((Settings.Global.getInt(getActivity().getContentResolver(), "send_action_app_error", 0) == 0) || (paramServiceItem == null))
-          break label601;
+          break label600;
         localActiveDetail.mInstaller = ApplicationErrorReport.getErrorReportReceiver(getActivity(), paramServiceItem.mServiceInfo.packageName, paramServiceItem.mServiceInfo.applicationInfo.flags);
         localButton2 = localActiveDetail.mReportButton;
         if (localActiveDetail.mInstaller == null)
-          break label595;
+          break label594;
       }
-      label549: label587: label595: for (boolean bool = true; ; bool = false)
+      label548: label586: label594: for (boolean bool = true; ; bool = false)
       {
         while (true)
         {
@@ -327,10 +323,10 @@ public class RunningServiceDetails extends Fragment
           if (paramMergedItem.mBackground)
           {
             localTextView.setText(2131428492);
-            break label315;
+            break label314;
           }
           if (localActiveDetail.mManageIntent == null)
-            break label549;
+            break label548;
           try
           {
             String str = getActivity().getPackageManager().getResourcesForApplication(paramServiceItem.mRunningService.clientPackage).getString(paramServiceItem.mRunningService.clientLabel);
@@ -340,7 +336,7 @@ public class RunningServiceDetails extends Fragment
           {
           }
         }
-        break label315;
+        break label314;
         Activity localActivity1 = getActivity();
         if (paramServiceItem != null);
         for (int i = 2131428490; ; i = 2131428491)
@@ -349,9 +345,9 @@ public class RunningServiceDetails extends Fragment
           break;
         }
         j = 2131428488;
-        break label351;
+        break label350;
       }
-      label601: localActiveDetail.mReportButton.setEnabled(false);
+      label600: localActiveDetail.mReportButton.setEnabled(false);
     }
   }
 
@@ -526,7 +522,7 @@ public class RunningServiceDetails extends Fragment
       //   0: aload_1
       //   1: aload_0
       //   2: getfield 42	com/android/settings/applications/RunningServiceDetails$ActiveDetail:mReportButton	Landroid/widget/Button;
-      //   5: if_acmpne +534 -> 539
+      //   5: if_acmpne +533 -> 538
       //   8: new 44	android/app/ApplicationErrorReport
       //   11: dup
       //   12: invokespecial 45	android/app/ApplicationErrorReport:<init>	()V
@@ -538,7 +534,7 @@ public class RunningServiceDetails extends Fragment
       //   22: aload_0
       //   23: getfield 51	com/android/settings/applications/RunningServiceDetails$ActiveDetail:mServiceItem	Lcom/android/settings/applications/RunningState$ServiceItem;
       //   26: getfield 57	com/android/settings/applications/RunningState$ServiceItem:mServiceInfo	Landroid/content/pm/ServiceInfo;
-      //   29: getfield 63	android/content/pm/PackageItemInfo:packageName	Ljava/lang/String;
+      //   29: getfield 63	android/content/pm/ServiceInfo:packageName	Ljava/lang/String;
       //   32: putfield 64	android/app/ApplicationErrorReport:packageName	Ljava/lang/String;
       //   35: aload_2
       //   36: aload_0
@@ -558,333 +554,333 @@ public class RunningServiceDetails extends Fragment
       //   68: aload_0
       //   69: getfield 51	com/android/settings/applications/RunningServiceDetails$ActiveDetail:mServiceItem	Lcom/android/settings/applications/RunningState$ServiceItem;
       //   72: getfield 57	com/android/settings/applications/RunningState$ServiceItem:mServiceInfo	Landroid/content/pm/ServiceInfo;
-      //   75: getfield 103	android/content/pm/ComponentInfo:applicationInfo	Landroid/content/pm/ApplicationInfo;
-      //   78: getfield 108	android/content/pm/ApplicationInfo:flags	I
+      //   75: getfield 101	android/content/pm/ServiceInfo:applicationInfo	Landroid/content/pm/ApplicationInfo;
+      //   78: getfield 106	android/content/pm/ApplicationInfo:flags	I
       //   81: iand
       //   82: ifeq +303 -> 385
       //   85: iconst_1
       //   86: istore_3
       //   87: aload_2
       //   88: iload_3
-      //   89: putfield 112	android/app/ApplicationErrorReport:systemApp	Z
-      //   92: new 114	android/app/ApplicationErrorReport$RunningServiceInfo
+      //   89: putfield 110	android/app/ApplicationErrorReport:systemApp	Z
+      //   92: new 112	android/app/ApplicationErrorReport$RunningServiceInfo
       //   95: dup
-      //   96: invokespecial 115	android/app/ApplicationErrorReport$RunningServiceInfo:<init>	()V
+      //   96: invokespecial 113	android/app/ApplicationErrorReport$RunningServiceInfo:<init>	()V
       //   99: astore 4
       //   101: aload_0
-      //   102: getfield 117	com/android/settings/applications/RunningServiceDetails$ActiveDetail:mActiveItem	Lcom/android/settings/applications/RunningProcessesView$ActiveItem;
-      //   105: getfield 122	com/android/settings/applications/RunningProcessesView$ActiveItem:mFirstRunTime	J
+      //   102: getfield 115	com/android/settings/applications/RunningServiceDetails$ActiveDetail:mActiveItem	Lcom/android/settings/applications/RunningProcessesView$ActiveItem;
+      //   105: getfield 120	com/android/settings/applications/RunningProcessesView$ActiveItem:mFirstRunTime	J
       //   108: lconst_0
       //   109: lcmp
       //   110: iflt +280 -> 390
       //   113: aload 4
-      //   115: invokestatic 127	android/os/SystemClock:elapsedRealtime	()J
+      //   115: invokestatic 125	android/os/SystemClock:elapsedRealtime	()J
       //   118: aload_0
-      //   119: getfield 117	com/android/settings/applications/RunningServiceDetails$ActiveDetail:mActiveItem	Lcom/android/settings/applications/RunningProcessesView$ActiveItem;
-      //   122: getfield 122	com/android/settings/applications/RunningProcessesView$ActiveItem:mFirstRunTime	J
+      //   119: getfield 115	com/android/settings/applications/RunningServiceDetails$ActiveDetail:mActiveItem	Lcom/android/settings/applications/RunningProcessesView$ActiveItem;
+      //   122: getfield 120	com/android/settings/applications/RunningProcessesView$ActiveItem:mFirstRunTime	J
       //   125: lsub
-      //   126: putfield 130	android/app/ApplicationErrorReport$RunningServiceInfo:durationMillis	J
+      //   126: putfield 128	android/app/ApplicationErrorReport$RunningServiceInfo:durationMillis	J
       //   129: new 68	android/content/ComponentName
       //   132: dup
       //   133: aload_0
       //   134: getfield 51	com/android/settings/applications/RunningServiceDetails$ActiveDetail:mServiceItem	Lcom/android/settings/applications/RunningState$ServiceItem;
       //   137: getfield 57	com/android/settings/applications/RunningState$ServiceItem:mServiceInfo	Landroid/content/pm/ServiceInfo;
-      //   140: getfield 63	android/content/pm/PackageItemInfo:packageName	Ljava/lang/String;
+      //   140: getfield 63	android/content/pm/ServiceInfo:packageName	Ljava/lang/String;
       //   143: aload_0
       //   144: getfield 51	com/android/settings/applications/RunningServiceDetails$ActiveDetail:mServiceItem	Lcom/android/settings/applications/RunningState$ServiceItem;
       //   147: getfield 57	com/android/settings/applications/RunningState$ServiceItem:mServiceInfo	Landroid/content/pm/ServiceInfo;
-      //   150: getfield 133	android/content/pm/PackageItemInfo:name	Ljava/lang/String;
-      //   153: invokespecial 136	android/content/ComponentName:<init>	(Ljava/lang/String;Ljava/lang/String;)V
+      //   150: getfield 131	android/content/pm/ServiceInfo:name	Ljava/lang/String;
+      //   153: invokespecial 134	android/content/ComponentName:<init>	(Ljava/lang/String;Ljava/lang/String;)V
       //   156: astore 5
       //   158: aload_0
       //   159: getfield 27	com/android/settings/applications/RunningServiceDetails$ActiveDetail:this$0	Lcom/android/settings/applications/RunningServiceDetails;
-      //   162: invokevirtual 142	android/app/Fragment:getActivity	()Landroid/app/Activity;
-      //   165: ldc 144
-      //   167: invokevirtual 150	android/content/ContextWrapper:getFileStreamPath	(Ljava/lang/String;)Ljava/io/File;
+      //   162: invokevirtual 140	com/android/settings/applications/RunningServiceDetails:getActivity	()Landroid/app/Activity;
+      //   165: ldc 142
+      //   167: invokevirtual 148	android/app/Activity:getFileStreamPath	(Ljava/lang/String;)Ljava/io/File;
       //   170: astore 6
       //   172: aconst_null
       //   173: astore 7
-      //   175: new 152	java/io/FileOutputStream
+      //   175: new 150	java/io/FileOutputStream
       //   178: dup
       //   179: aload 6
-      //   181: invokespecial 155	java/io/FileOutputStream:<init>	(Ljava/io/File;)V
+      //   181: invokespecial 153	java/io/FileOutputStream:<init>	(Ljava/io/File;)V
       //   184: astore 8
       //   186: aload 8
-      //   188: invokevirtual 159	java/io/FileOutputStream:getFD	()Ljava/io/FileDescriptor;
+      //   188: invokevirtual 157	java/io/FileOutputStream:getFD	()Ljava/io/FileDescriptor;
       //   191: astore 30
       //   193: iconst_3
-      //   194: anewarray 161	java/lang/String
+      //   194: anewarray 159	java/lang/String
       //   197: astore 31
       //   199: aload 31
       //   201: iconst_0
-      //   202: ldc 163
+      //   202: ldc 161
       //   204: aastore
       //   205: aload 31
       //   207: iconst_1
-      //   208: ldc 165
+      //   208: ldc 163
       //   210: aastore
       //   211: aload 31
       //   213: iconst_2
       //   214: aload 5
-      //   216: invokevirtual 168	android/content/ComponentName:flattenToString	()Ljava/lang/String;
+      //   216: invokevirtual 166	android/content/ComponentName:flattenToString	()Ljava/lang/String;
       //   219: aastore
-      //   220: ldc 170
+      //   220: ldc 168
       //   222: aload 30
       //   224: aload 31
-      //   226: invokestatic 176	android/os/Debug:dumpService	(Ljava/lang/String;Ljava/io/FileDescriptor;[Ljava/lang/String;)Z
+      //   226: invokestatic 174	android/os/Debug:dumpService	(Ljava/lang/String;Ljava/io/FileDescriptor;[Ljava/lang/String;)Z
       //   229: pop
       //   230: aload 8
-      //   232: ifnull +510 -> 742
+      //   232: ifnull +509 -> 741
       //   235: aload 8
-      //   237: invokevirtual 179	java/io/FileOutputStream:close	()V
+      //   237: invokevirtual 177	java/io/FileOutputStream:close	()V
       //   240: aconst_null
       //   241: astore 14
-      //   243: new 181	java/io/FileInputStream
+      //   243: new 179	java/io/FileInputStream
       //   246: dup
       //   247: aload 6
-      //   249: invokespecial 182	java/io/FileInputStream:<init>	(Ljava/io/File;)V
+      //   249: invokespecial 180	java/io/FileInputStream:<init>	(Ljava/io/File;)V
       //   252: astore 15
       //   254: aload 6
-      //   256: invokevirtual 187	java/io/File:length	()J
+      //   256: invokevirtual 185	java/io/File:length	()J
       //   259: l2i
       //   260: newarray byte
       //   262: astore 27
       //   264: aload 15
       //   266: aload 27
-      //   268: invokevirtual 193	java/io/InputStream:read	([B)I
+      //   268: invokevirtual 189	java/io/FileInputStream:read	([B)I
       //   271: pop
       //   272: aload 4
-      //   274: new 161	java/lang/String
+      //   274: new 159	java/lang/String
       //   277: dup
       //   278: aload 27
-      //   280: invokespecial 196	java/lang/String:<init>	([B)V
-      //   283: putfield 199	android/app/ApplicationErrorReport$RunningServiceInfo:serviceDetails	Ljava/lang/String;
+      //   280: invokespecial 192	java/lang/String:<init>	([B)V
+      //   283: putfield 195	android/app/ApplicationErrorReport$RunningServiceInfo:serviceDetails	Ljava/lang/String;
       //   286: aload 15
-      //   288: ifnull +451 -> 739
+      //   288: ifnull +450 -> 738
       //   291: aload 15
-      //   293: invokevirtual 200	java/io/FileInputStream:close	()V
+      //   293: invokevirtual 196	java/io/FileInputStream:close	()V
       //   296: aload 6
-      //   298: invokevirtual 204	java/io/File:delete	()Z
+      //   298: invokevirtual 200	java/io/File:delete	()Z
       //   301: pop
-      //   302: ldc 206
-      //   304: new 208	java/lang/StringBuilder
+      //   302: ldc 202
+      //   304: new 204	java/lang/StringBuilder
       //   307: dup
-      //   308: invokespecial 209	java/lang/StringBuilder:<init>	()V
-      //   311: ldc 211
-      //   313: invokevirtual 215	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      //   308: invokespecial 205	java/lang/StringBuilder:<init>	()V
+      //   311: ldc 207
+      //   313: invokevirtual 211	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
       //   316: aload 4
-      //   318: getfield 199	android/app/ApplicationErrorReport$RunningServiceInfo:serviceDetails	Ljava/lang/String;
-      //   321: invokevirtual 215	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-      //   324: invokevirtual 218	java/lang/StringBuilder:toString	()Ljava/lang/String;
-      //   327: invokestatic 224	android/util/Log:i	(Ljava/lang/String;Ljava/lang/String;)I
+      //   318: getfield 195	android/app/ApplicationErrorReport$RunningServiceInfo:serviceDetails	Ljava/lang/String;
+      //   321: invokevirtual 211	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      //   324: invokevirtual 214	java/lang/StringBuilder:toString	()Ljava/lang/String;
+      //   327: invokestatic 220	android/util/Log:i	(Ljava/lang/String;Ljava/lang/String;)I
       //   330: pop
       //   331: aload_2
       //   332: aload 4
-      //   334: putfield 228	android/app/ApplicationErrorReport:runningServiceInfo	Landroid/app/ApplicationErrorReport$RunningServiceInfo;
-      //   337: new 230	android/content/Intent
+      //   334: putfield 224	android/app/ApplicationErrorReport:runningServiceInfo	Landroid/app/ApplicationErrorReport$RunningServiceInfo;
+      //   337: new 226	android/content/Intent
       //   340: dup
-      //   341: ldc 232
-      //   343: invokespecial 235	android/content/Intent:<init>	(Ljava/lang/String;)V
+      //   341: ldc 228
+      //   343: invokespecial 231	android/content/Intent:<init>	(Ljava/lang/String;)V
       //   346: astore 23
       //   348: aload 23
       //   350: aload_0
       //   351: getfield 66	com/android/settings/applications/RunningServiceDetails$ActiveDetail:mInstaller	Landroid/content/ComponentName;
-      //   354: invokevirtual 239	android/content/Intent:setComponent	(Landroid/content/ComponentName;)Landroid/content/Intent;
+      //   354: invokevirtual 235	android/content/Intent:setComponent	(Landroid/content/ComponentName;)Landroid/content/Intent;
       //   357: pop
       //   358: aload 23
-      //   360: ldc 241
+      //   360: ldc 237
       //   362: aload_2
-      //   363: invokevirtual 245	android/content/Intent:putExtra	(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+      //   363: invokevirtual 241	android/content/Intent:putExtra	(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
       //   366: pop
       //   367: aload 23
-      //   369: ldc 246
-      //   371: invokevirtual 250	android/content/Intent:addFlags	(I)Landroid/content/Intent;
+      //   369: ldc 242
+      //   371: invokevirtual 246	android/content/Intent:addFlags	(I)Landroid/content/Intent;
       //   374: pop
       //   375: aload_0
       //   376: getfield 27	com/android/settings/applications/RunningServiceDetails$ActiveDetail:this$0	Lcom/android/settings/applications/RunningServiceDetails;
       //   379: aload 23
-      //   381: invokevirtual 254	android/app/Fragment:startActivity	(Landroid/content/Intent;)V
+      //   381: invokevirtual 250	com/android/settings/applications/RunningServiceDetails:startActivity	(Landroid/content/Intent;)V
       //   384: return
       //   385: iconst_0
       //   386: istore_3
       //   387: goto -300 -> 87
       //   390: aload 4
-      //   392: ldc2_w 255
-      //   395: putfield 130	android/app/ApplicationErrorReport$RunningServiceInfo:durationMillis	J
+      //   392: ldc2_w 251
+      //   395: putfield 128	android/app/ApplicationErrorReport$RunningServiceInfo:durationMillis	J
       //   398: goto -269 -> 129
       //   401: astore 33
       //   403: goto -163 -> 240
       //   406: astore 9
-      //   408: ldc 206
-      //   410: new 208	java/lang/StringBuilder
+      //   408: ldc 202
+      //   410: new 204	java/lang/StringBuilder
       //   413: dup
-      //   414: invokespecial 209	java/lang/StringBuilder:<init>	()V
-      //   417: ldc_w 258
-      //   420: invokevirtual 215	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-      //   423: aload 5
-      //   425: invokevirtual 261	java/lang/StringBuilder:append	(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-      //   428: invokevirtual 218	java/lang/StringBuilder:toString	()Ljava/lang/String;
-      //   431: aload 9
-      //   433: invokestatic 265	android/util/Log:w	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-      //   436: pop
-      //   437: aload 7
-      //   439: ifnull -199 -> 240
-      //   442: aload 7
-      //   444: invokevirtual 179	java/io/FileOutputStream:close	()V
-      //   447: goto -207 -> 240
-      //   450: astore 13
-      //   452: goto -212 -> 240
-      //   455: astore 10
-      //   457: aload 7
-      //   459: ifnull +8 -> 467
-      //   462: aload 7
-      //   464: invokevirtual 179	java/io/FileOutputStream:close	()V
-      //   467: aload 10
-      //   469: athrow
-      //   470: astore 29
-      //   472: goto -176 -> 296
-      //   475: astore 16
-      //   477: ldc 206
-      //   479: new 208	java/lang/StringBuilder
-      //   482: dup
-      //   483: invokespecial 209	java/lang/StringBuilder:<init>	()V
-      //   486: ldc_w 267
-      //   489: invokevirtual 215	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-      //   492: aload 5
-      //   494: invokevirtual 261	java/lang/StringBuilder:append	(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-      //   497: invokevirtual 218	java/lang/StringBuilder:toString	()Ljava/lang/String;
-      //   500: aload 16
-      //   502: invokestatic 265	android/util/Log:w	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-      //   505: pop
-      //   506: aload 14
-      //   508: ifnull -212 -> 296
-      //   511: aload 14
-      //   513: invokevirtual 200	java/io/FileInputStream:close	()V
-      //   516: goto -220 -> 296
-      //   519: astore 20
-      //   521: goto -225 -> 296
-      //   524: astore 17
-      //   526: aload 14
-      //   528: ifnull +8 -> 536
-      //   531: aload 14
-      //   533: invokevirtual 200	java/io/FileInputStream:close	()V
-      //   536: aload 17
-      //   538: athrow
-      //   539: aload_0
-      //   540: getfield 269	com/android/settings/applications/RunningServiceDetails$ActiveDetail:mManageIntent	Landroid/app/PendingIntent;
-      //   543: ifnull +62 -> 605
-      //   546: aload_0
-      //   547: getfield 27	com/android/settings/applications/RunningServiceDetails$ActiveDetail:this$0	Lcom/android/settings/applications/RunningServiceDetails;
-      //   550: invokevirtual 142	android/app/Fragment:getActivity	()Landroid/app/Activity;
-      //   553: aload_0
-      //   554: getfield 269	com/android/settings/applications/RunningServiceDetails$ActiveDetail:mManageIntent	Landroid/app/PendingIntent;
-      //   557: invokevirtual 275	android/app/PendingIntent:getIntentSender	()Landroid/content/IntentSender;
-      //   560: aconst_null
-      //   561: ldc_w 276
-      //   564: ldc_w 277
-      //   567: iconst_0
-      //   568: invokevirtual 283	android/app/Activity:startIntentSender	(Landroid/content/IntentSender;Landroid/content/Intent;III)V
-      //   571: return
-      //   572: astore 38
-      //   574: ldc 206
-      //   576: aload 38
-      //   578: invokestatic 286	android/util/Log:w	(Ljava/lang/String;Ljava/lang/Throwable;)I
-      //   581: pop
-      //   582: return
-      //   583: astore 36
-      //   585: ldc 206
-      //   587: aload 36
-      //   589: invokestatic 286	android/util/Log:w	(Ljava/lang/String;Ljava/lang/Throwable;)I
-      //   592: pop
-      //   593: return
-      //   594: astore 34
-      //   596: ldc 206
-      //   598: aload 34
-      //   600: invokestatic 286	android/util/Log:w	(Ljava/lang/String;Ljava/lang/Throwable;)I
-      //   603: pop
-      //   604: return
-      //   605: aload_0
-      //   606: getfield 51	com/android/settings/applications/RunningServiceDetails$ActiveDetail:mServiceItem	Lcom/android/settings/applications/RunningState$ServiceItem;
-      //   609: ifnull +9 -> 618
-      //   612: aload_0
-      //   613: iconst_0
-      //   614: invokevirtual 290	com/android/settings/applications/RunningServiceDetails$ActiveDetail:stopActiveService	(Z)V
-      //   617: return
-      //   618: aload_0
-      //   619: getfield 117	com/android/settings/applications/RunningServiceDetails$ActiveDetail:mActiveItem	Lcom/android/settings/applications/RunningProcessesView$ActiveItem;
-      //   622: getfield 294	com/android/settings/applications/RunningProcessesView$ActiveItem:mItem	Lcom/android/settings/applications/RunningState$BaseItem;
-      //   625: getfield 299	com/android/settings/applications/RunningState$BaseItem:mBackground	Z
-      //   628: ifeq +34 -> 662
-      //   631: aload_0
-      //   632: getfield 27	com/android/settings/applications/RunningServiceDetails$ActiveDetail:this$0	Lcom/android/settings/applications/RunningServiceDetails;
-      //   635: getfield 305	com/android/settings/applications/RunningServiceDetails:mAm	Landroid/app/ActivityManager;
-      //   638: aload_0
-      //   639: getfield 117	com/android/settings/applications/RunningServiceDetails$ActiveDetail:mActiveItem	Lcom/android/settings/applications/RunningProcessesView$ActiveItem;
-      //   642: getfield 294	com/android/settings/applications/RunningProcessesView$ActiveItem:mItem	Lcom/android/settings/applications/RunningState$BaseItem;
-      //   645: getfield 309	com/android/settings/applications/RunningState$BaseItem:mPackageInfo	Landroid/content/pm/PackageItemInfo;
-      //   648: getfield 63	android/content/pm/PackageItemInfo:packageName	Ljava/lang/String;
-      //   651: invokevirtual 314	android/app/ActivityManager:killBackgroundProcesses	(Ljava/lang/String;)V
-      //   654: aload_0
-      //   655: getfield 27	com/android/settings/applications/RunningServiceDetails$ActiveDetail:this$0	Lcom/android/settings/applications/RunningServiceDetails;
-      //   658: invokestatic 317	com/android/settings/applications/RunningServiceDetails:access$100	(Lcom/android/settings/applications/RunningServiceDetails;)V
-      //   661: return
-      //   662: aload_0
-      //   663: getfield 27	com/android/settings/applications/RunningServiceDetails$ActiveDetail:this$0	Lcom/android/settings/applications/RunningServiceDetails;
-      //   666: getfield 305	com/android/settings/applications/RunningServiceDetails:mAm	Landroid/app/ActivityManager;
-      //   669: aload_0
-      //   670: getfield 117	com/android/settings/applications/RunningServiceDetails$ActiveDetail:mActiveItem	Lcom/android/settings/applications/RunningProcessesView$ActiveItem;
-      //   673: getfield 294	com/android/settings/applications/RunningProcessesView$ActiveItem:mItem	Lcom/android/settings/applications/RunningState$BaseItem;
-      //   676: getfield 309	com/android/settings/applications/RunningState$BaseItem:mPackageInfo	Landroid/content/pm/PackageItemInfo;
-      //   679: getfield 63	android/content/pm/PackageItemInfo:packageName	Ljava/lang/String;
-      //   682: invokevirtual 320	android/app/ActivityManager:forceStopPackage	(Ljava/lang/String;)V
-      //   685: aload_0
-      //   686: getfield 27	com/android/settings/applications/RunningServiceDetails$ActiveDetail:this$0	Lcom/android/settings/applications/RunningServiceDetails;
-      //   689: invokestatic 317	com/android/settings/applications/RunningServiceDetails:access$100	(Lcom/android/settings/applications/RunningServiceDetails;)V
-      //   692: return
-      //   693: astore 11
-      //   695: goto -228 -> 467
-      //   698: astore 18
-      //   700: goto -164 -> 536
-      //   703: astore 17
-      //   705: aload 15
-      //   707: astore 14
-      //   709: goto -183 -> 526
-      //   712: astore 16
-      //   714: aload 15
-      //   716: astore 14
-      //   718: goto -241 -> 477
-      //   721: astore 10
-      //   723: aload 8
-      //   725: astore 7
-      //   727: goto -270 -> 457
-      //   730: astore 9
-      //   732: aload 8
-      //   734: astore 7
-      //   736: goto -328 -> 408
-      //   739: goto -443 -> 296
-      //   742: goto -502 -> 240
+      //   414: invokespecial 205	java/lang/StringBuilder:<init>	()V
+      //   417: ldc 254
+      //   419: invokevirtual 211	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      //   422: aload 5
+      //   424: invokevirtual 257	java/lang/StringBuilder:append	(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+      //   427: invokevirtual 214	java/lang/StringBuilder:toString	()Ljava/lang/String;
+      //   430: aload 9
+      //   432: invokestatic 261	android/util/Log:w	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+      //   435: pop
+      //   436: aload 7
+      //   438: ifnull -198 -> 240
+      //   441: aload 7
+      //   443: invokevirtual 177	java/io/FileOutputStream:close	()V
+      //   446: goto -206 -> 240
+      //   449: astore 13
+      //   451: goto -211 -> 240
+      //   454: astore 10
+      //   456: aload 7
+      //   458: ifnull +8 -> 466
+      //   461: aload 7
+      //   463: invokevirtual 177	java/io/FileOutputStream:close	()V
+      //   466: aload 10
+      //   468: athrow
+      //   469: astore 29
+      //   471: goto -175 -> 296
+      //   474: astore 16
+      //   476: ldc 202
+      //   478: new 204	java/lang/StringBuilder
+      //   481: dup
+      //   482: invokespecial 205	java/lang/StringBuilder:<init>	()V
+      //   485: ldc_w 263
+      //   488: invokevirtual 211	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      //   491: aload 5
+      //   493: invokevirtual 257	java/lang/StringBuilder:append	(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+      //   496: invokevirtual 214	java/lang/StringBuilder:toString	()Ljava/lang/String;
+      //   499: aload 16
+      //   501: invokestatic 261	android/util/Log:w	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+      //   504: pop
+      //   505: aload 14
+      //   507: ifnull -211 -> 296
+      //   510: aload 14
+      //   512: invokevirtual 196	java/io/FileInputStream:close	()V
+      //   515: goto -219 -> 296
+      //   518: astore 20
+      //   520: goto -224 -> 296
+      //   523: astore 17
+      //   525: aload 14
+      //   527: ifnull +8 -> 535
+      //   530: aload 14
+      //   532: invokevirtual 196	java/io/FileInputStream:close	()V
+      //   535: aload 17
+      //   537: athrow
+      //   538: aload_0
+      //   539: getfield 265	com/android/settings/applications/RunningServiceDetails$ActiveDetail:mManageIntent	Landroid/app/PendingIntent;
+      //   542: ifnull +62 -> 604
+      //   545: aload_0
+      //   546: getfield 27	com/android/settings/applications/RunningServiceDetails$ActiveDetail:this$0	Lcom/android/settings/applications/RunningServiceDetails;
+      //   549: invokevirtual 140	com/android/settings/applications/RunningServiceDetails:getActivity	()Landroid/app/Activity;
+      //   552: aload_0
+      //   553: getfield 265	com/android/settings/applications/RunningServiceDetails$ActiveDetail:mManageIntent	Landroid/app/PendingIntent;
+      //   556: invokevirtual 271	android/app/PendingIntent:getIntentSender	()Landroid/content/IntentSender;
+      //   559: aconst_null
+      //   560: ldc_w 272
+      //   563: ldc_w 273
+      //   566: iconst_0
+      //   567: invokevirtual 277	android/app/Activity:startIntentSender	(Landroid/content/IntentSender;Landroid/content/Intent;III)V
+      //   570: return
+      //   571: astore 38
+      //   573: ldc 202
+      //   575: aload 38
+      //   577: invokestatic 280	android/util/Log:w	(Ljava/lang/String;Ljava/lang/Throwable;)I
+      //   580: pop
+      //   581: return
+      //   582: astore 36
+      //   584: ldc 202
+      //   586: aload 36
+      //   588: invokestatic 280	android/util/Log:w	(Ljava/lang/String;Ljava/lang/Throwable;)I
+      //   591: pop
+      //   592: return
+      //   593: astore 34
+      //   595: ldc 202
+      //   597: aload 34
+      //   599: invokestatic 280	android/util/Log:w	(Ljava/lang/String;Ljava/lang/Throwable;)I
+      //   602: pop
+      //   603: return
+      //   604: aload_0
+      //   605: getfield 51	com/android/settings/applications/RunningServiceDetails$ActiveDetail:mServiceItem	Lcom/android/settings/applications/RunningState$ServiceItem;
+      //   608: ifnull +9 -> 617
+      //   611: aload_0
+      //   612: iconst_0
+      //   613: invokevirtual 284	com/android/settings/applications/RunningServiceDetails$ActiveDetail:stopActiveService	(Z)V
+      //   616: return
+      //   617: aload_0
+      //   618: getfield 115	com/android/settings/applications/RunningServiceDetails$ActiveDetail:mActiveItem	Lcom/android/settings/applications/RunningProcessesView$ActiveItem;
+      //   621: getfield 288	com/android/settings/applications/RunningProcessesView$ActiveItem:mItem	Lcom/android/settings/applications/RunningState$BaseItem;
+      //   624: getfield 293	com/android/settings/applications/RunningState$BaseItem:mBackground	Z
+      //   627: ifeq +34 -> 661
+      //   630: aload_0
+      //   631: getfield 27	com/android/settings/applications/RunningServiceDetails$ActiveDetail:this$0	Lcom/android/settings/applications/RunningServiceDetails;
+      //   634: getfield 297	com/android/settings/applications/RunningServiceDetails:mAm	Landroid/app/ActivityManager;
+      //   637: aload_0
+      //   638: getfield 115	com/android/settings/applications/RunningServiceDetails$ActiveDetail:mActiveItem	Lcom/android/settings/applications/RunningProcessesView$ActiveItem;
+      //   641: getfield 288	com/android/settings/applications/RunningProcessesView$ActiveItem:mItem	Lcom/android/settings/applications/RunningState$BaseItem;
+      //   644: getfield 301	com/android/settings/applications/RunningState$BaseItem:mPackageInfo	Landroid/content/pm/PackageItemInfo;
+      //   647: getfield 304	android/content/pm/PackageItemInfo:packageName	Ljava/lang/String;
+      //   650: invokevirtual 309	android/app/ActivityManager:killBackgroundProcesses	(Ljava/lang/String;)V
+      //   653: aload_0
+      //   654: getfield 27	com/android/settings/applications/RunningServiceDetails$ActiveDetail:this$0	Lcom/android/settings/applications/RunningServiceDetails;
+      //   657: invokestatic 312	com/android/settings/applications/RunningServiceDetails:access$100	(Lcom/android/settings/applications/RunningServiceDetails;)V
+      //   660: return
+      //   661: aload_0
+      //   662: getfield 27	com/android/settings/applications/RunningServiceDetails$ActiveDetail:this$0	Lcom/android/settings/applications/RunningServiceDetails;
+      //   665: getfield 297	com/android/settings/applications/RunningServiceDetails:mAm	Landroid/app/ActivityManager;
+      //   668: aload_0
+      //   669: getfield 115	com/android/settings/applications/RunningServiceDetails$ActiveDetail:mActiveItem	Lcom/android/settings/applications/RunningProcessesView$ActiveItem;
+      //   672: getfield 288	com/android/settings/applications/RunningProcessesView$ActiveItem:mItem	Lcom/android/settings/applications/RunningState$BaseItem;
+      //   675: getfield 301	com/android/settings/applications/RunningState$BaseItem:mPackageInfo	Landroid/content/pm/PackageItemInfo;
+      //   678: getfield 304	android/content/pm/PackageItemInfo:packageName	Ljava/lang/String;
+      //   681: invokevirtual 315	android/app/ActivityManager:forceStopPackage	(Ljava/lang/String;)V
+      //   684: aload_0
+      //   685: getfield 27	com/android/settings/applications/RunningServiceDetails$ActiveDetail:this$0	Lcom/android/settings/applications/RunningServiceDetails;
+      //   688: invokestatic 312	com/android/settings/applications/RunningServiceDetails:access$100	(Lcom/android/settings/applications/RunningServiceDetails;)V
+      //   691: return
+      //   692: astore 11
+      //   694: goto -228 -> 466
+      //   697: astore 18
+      //   699: goto -164 -> 535
+      //   702: astore 17
+      //   704: aload 15
+      //   706: astore 14
+      //   708: goto -183 -> 525
+      //   711: astore 16
+      //   713: aload 15
+      //   715: astore 14
+      //   717: goto -241 -> 476
+      //   720: astore 10
+      //   722: aload 8
+      //   724: astore 7
+      //   726: goto -270 -> 456
+      //   729: astore 9
+      //   731: aload 8
+      //   733: astore 7
+      //   735: goto -327 -> 408
+      //   738: goto -442 -> 296
+      //   741: goto -501 -> 240
       //
       // Exception table:
       //   from	to	target	type
       //   235	240	401	java/io/IOException
       //   175	186	406	java/io/IOException
-      //   442	447	450	java/io/IOException
-      //   175	186	455	finally
-      //   408	437	455	finally
-      //   291	296	470	java/io/IOException
-      //   243	254	475	java/io/IOException
-      //   511	516	519	java/io/IOException
-      //   243	254	524	finally
-      //   477	506	524	finally
-      //   546	571	572	android/content/IntentSender$SendIntentException
-      //   546	571	583	java/lang/IllegalArgumentException
-      //   546	571	594	android/content/ActivityNotFoundException
-      //   462	467	693	java/io/IOException
-      //   531	536	698	java/io/IOException
-      //   254	286	703	finally
-      //   254	286	712	java/io/IOException
-      //   186	230	721	finally
-      //   186	230	730	java/io/IOException
+      //   441	446	449	java/io/IOException
+      //   175	186	454	finally
+      //   408	436	454	finally
+      //   291	296	469	java/io/IOException
+      //   243	254	474	java/io/IOException
+      //   510	515	518	java/io/IOException
+      //   243	254	523	finally
+      //   476	505	523	finally
+      //   545	570	571	android/content/IntentSender$SendIntentException
+      //   545	570	582	java/lang/IllegalArgumentException
+      //   545	570	593	android/content/ActivityNotFoundException
+      //   461	466	692	java/io/IOException
+      //   530	535	697	java/io/IOException
+      //   254	286	702	finally
+      //   254	286	711	java/io/IOException
+      //   186	230	720	finally
+      //   186	230	729	java/io/IOException
     }
 
     void stopActiveService(boolean paramBoolean)

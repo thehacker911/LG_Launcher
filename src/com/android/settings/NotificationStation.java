@@ -2,7 +2,6 @@ package com.android.settings;
 
 import android.app.Activity;
 import android.app.ActivityManager;
-import android.app.Fragment;
 import android.app.INotificationManager;
 import android.app.INotificationManager.Stub;
 import android.app.Notification;
@@ -21,7 +20,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.RemoteException;
 import android.os.ServiceManager;
-import android.preference.PreferenceFragment;
 import android.service.notification.INotificationListener.Stub;
 import android.util.Log;
 import android.view.LayoutInflater;

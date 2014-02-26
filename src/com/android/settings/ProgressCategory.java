@@ -2,7 +2,6 @@ package com.android.settings;
 
 import android.content.Context;
 import android.preference.Preference;
-import android.preference.PreferenceGroup;
 import android.util.AttributeSet;
 import android.view.View;
 

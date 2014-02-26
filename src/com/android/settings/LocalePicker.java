@@ -2,10 +2,6 @@ package com.android.settings;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.app.DialogFragment;
-import android.app.Fragment;
-import android.app.ListFragment;
-import android.content.ContextWrapper;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;

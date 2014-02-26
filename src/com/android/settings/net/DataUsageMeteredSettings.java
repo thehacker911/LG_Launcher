@@ -1,7 +1,6 @@
 package com.android.settings.net;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.Context;
 import android.net.NetworkPolicy;
 import android.net.NetworkPolicyManager;
@@ -13,9 +12,7 @@ import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.PreferenceCategory;
-import android.preference.PreferenceFragment;
-import android.preference.PreferenceGroup;
-import android.preference.TwoStatePreference;
+import android.preference.PreferenceScreen;
 import com.android.settings.DataUsageSummary;
 import com.android.settings.SettingsPreferenceFragment;
 import java.util.Iterator;

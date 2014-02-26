@@ -20,7 +20,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AbsSpinner;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
@@ -554,30 +553,30 @@ public class WifiConfigController
   {
     // Byte code:
     //   0: aload_0
-    //   1: getfield 522	com/android/settings/wifi/WifiConfigController:mIpAddressView	Landroid/widget/TextView;
+    //   1: getfield 518	com/android/settings/wifi/WifiConfigController:mIpAddressView	Landroid/widget/TextView;
     //   4: ifnonnull +5 -> 9
     //   7: iconst_0
     //   8: ireturn
     //   9: aload_0
-    //   10: getfield 522	com/android/settings/wifi/WifiConfigController:mIpAddressView	Landroid/widget/TextView;
-    //   13: invokevirtual 418	android/widget/TextView:getText	()Ljava/lang/CharSequence;
-    //   16: invokevirtual 419	java/lang/Object:toString	()Ljava/lang/String;
+    //   10: getfield 518	com/android/settings/wifi/WifiConfigController:mIpAddressView	Landroid/widget/TextView;
+    //   13: invokevirtual 414	android/widget/TextView:getText	()Ljava/lang/CharSequence;
+    //   16: invokevirtual 415	java/lang/Object:toString	()Ljava/lang/String;
     //   19: astore_2
     //   20: aload_2
-    //   21: invokestatic 658	android/text/TextUtils:isEmpty	(Ljava/lang/CharSequence;)Z
+    //   21: invokestatic 654	android/text/TextUtils:isEmpty	(Ljava/lang/CharSequence;)Z
     //   24: ifeq +7 -> 31
-    //   27: ldc_w 659
+    //   27: ldc_w 655
     //   30: ireturn
     //   31: aload_2
-    //   32: invokestatic 665	android/net/NetworkUtils:numericToInetAddress	(Ljava/lang/String;)Ljava/net/InetAddress;
+    //   32: invokestatic 661	android/net/NetworkUtils:numericToInetAddress	(Ljava/lang/String;)Ljava/net/InetAddress;
     //   35: astore 4
     //   37: iconst_m1
     //   38: istore 5
     //   40: aload_0
-    //   41: getfield 529	com/android/settings/wifi/WifiConfigController:mNetworkPrefixLengthView	Landroid/widget/TextView;
-    //   44: invokevirtual 418	android/widget/TextView:getText	()Ljava/lang/CharSequence;
-    //   47: invokevirtual 419	java/lang/Object:toString	()Ljava/lang/String;
-    //   50: invokestatic 429	java/lang/Integer:parseInt	(Ljava/lang/String;)I
+    //   41: getfield 525	com/android/settings/wifi/WifiConfigController:mNetworkPrefixLengthView	Landroid/widget/TextView;
+    //   44: invokevirtual 414	android/widget/TextView:getText	()Ljava/lang/CharSequence;
+    //   47: invokevirtual 415	java/lang/Object:toString	()Ljava/lang/String;
+    //   50: invokestatic 425	java/lang/Integer:parseInt	(Ljava/lang/String;)I
     //   53: istore 5
     //   55: iload 5
     //   57: iflt +258 -> 315
@@ -586,25 +585,25 @@ public class WifiConfigController
     //   64: if_icmple +6 -> 70
     //   67: goto +248 -> 315
     //   70: aload_1
-    //   71: new 540	android/net/LinkAddress
+    //   71: new 536	android/net/LinkAddress
     //   74: dup
     //   75: aload 4
     //   77: iload 5
-    //   79: invokespecial 668	android/net/LinkAddress:<init>	(Ljava/net/InetAddress;I)V
-    //   82: invokevirtual 672	android/net/LinkProperties:addLinkAddress	(Landroid/net/LinkAddress;)Z
+    //   79: invokespecial 664	android/net/LinkAddress:<init>	(Ljava/net/InetAddress;I)V
+    //   82: invokevirtual 668	android/net/LinkProperties:addLinkAddress	(Landroid/net/LinkAddress;)Z
     //   85: pop
     //   86: aload_0
-    //   87: getfield 526	com/android/settings/wifi/WifiConfigController:mGatewayView	Landroid/widget/TextView;
-    //   90: invokevirtual 418	android/widget/TextView:getText	()Ljava/lang/CharSequence;
-    //   93: invokevirtual 419	java/lang/Object:toString	()Ljava/lang/String;
+    //   87: getfield 522	com/android/settings/wifi/WifiConfigController:mGatewayView	Landroid/widget/TextView;
+    //   90: invokevirtual 414	android/widget/TextView:getText	()Ljava/lang/CharSequence;
+    //   93: invokevirtual 415	java/lang/Object:toString	()Ljava/lang/String;
     //   96: astore 7
     //   98: aload 7
-    //   100: invokestatic 658	android/text/TextUtils:isEmpty	(Ljava/lang/CharSequence;)Z
+    //   100: invokestatic 654	android/text/TextUtils:isEmpty	(Ljava/lang/CharSequence;)Z
     //   103: ifeq +145 -> 248
     //   106: aload 4
     //   108: iload 5
-    //   110: invokestatic 676	android/net/NetworkUtils:getNetworkPart	(Ljava/net/InetAddress;I)Ljava/net/InetAddress;
-    //   113: invokevirtual 679	java/net/InetAddress:getAddress	()[B
+    //   110: invokestatic 672	android/net/NetworkUtils:getNetworkPart	(Ljava/net/InetAddress;I)Ljava/net/InetAddress;
+    //   113: invokevirtual 675	java/net/InetAddress:getAddress	()[B
     //   116: astore 18
     //   118: aload 18
     //   120: iconst_m1
@@ -614,88 +613,88 @@ public class WifiConfigController
     //   125: iconst_1
     //   126: bastore
     //   127: aload_0
-    //   128: getfield 526	com/android/settings/wifi/WifiConfigController:mGatewayView	Landroid/widget/TextView;
+    //   128: getfield 522	com/android/settings/wifi/WifiConfigController:mGatewayView	Landroid/widget/TextView;
     //   131: aload 18
-    //   133: invokestatic 683	java/net/InetAddress:getByAddress	([B)Ljava/net/InetAddress;
-    //   136: invokevirtual 341	java/net/InetAddress:getHostAddress	()Ljava/lang/String;
-    //   139: invokevirtual 371	android/widget/TextView:setText	(Ljava/lang/CharSequence;)V
+    //   133: invokestatic 679	java/net/InetAddress:getByAddress	([B)Ljava/net/InetAddress;
+    //   136: invokevirtual 335	java/net/InetAddress:getHostAddress	()Ljava/lang/String;
+    //   139: invokevirtual 367	android/widget/TextView:setText	(Ljava/lang/CharSequence;)V
     //   142: aload_0
-    //   143: getfield 532	com/android/settings/wifi/WifiConfigController:mDns1View	Landroid/widget/TextView;
-    //   146: invokevirtual 418	android/widget/TextView:getText	()Ljava/lang/CharSequence;
-    //   149: invokevirtual 419	java/lang/Object:toString	()Ljava/lang/String;
+    //   143: getfield 528	com/android/settings/wifi/WifiConfigController:mDns1View	Landroid/widget/TextView;
+    //   146: invokevirtual 414	android/widget/TextView:getText	()Ljava/lang/CharSequence;
+    //   149: invokevirtual 415	java/lang/Object:toString	()Ljava/lang/String;
     //   152: astore 10
     //   154: aload 10
-    //   156: invokestatic 658	android/text/TextUtils:isEmpty	(Ljava/lang/CharSequence;)Z
+    //   156: invokestatic 654	android/text/TextUtils:isEmpty	(Ljava/lang/CharSequence;)Z
     //   159: ifeq +118 -> 277
     //   162: aload_0
-    //   163: getfield 532	com/android/settings/wifi/WifiConfigController:mDns1View	Landroid/widget/TextView;
+    //   163: getfield 528	com/android/settings/wifi/WifiConfigController:mDns1View	Landroid/widget/TextView;
     //   166: aload_0
     //   167: getfield 86	com/android/settings/wifi/WifiConfigController:mConfigUi	Lcom/android/settings/wifi/WifiConfigUiBase;
     //   170: invokeinterface 109 1 0
-    //   175: ldc_w 684
+    //   175: ldc_w 680
     //   178: invokevirtual 143	android/content/Context:getString	(I)Ljava/lang/String;
-    //   181: invokevirtual 371	android/widget/TextView:setText	(Ljava/lang/CharSequence;)V
+    //   181: invokevirtual 367	android/widget/TextView:setText	(Ljava/lang/CharSequence;)V
     //   184: aload_0
-    //   185: getfield 535	com/android/settings/wifi/WifiConfigController:mDns2View	Landroid/widget/TextView;
-    //   188: invokevirtual 687	android/widget/TextView:length	()I
+    //   185: getfield 531	com/android/settings/wifi/WifiConfigController:mDns2View	Landroid/widget/TextView;
+    //   188: invokevirtual 683	android/widget/TextView:length	()I
     //   191: ifle +28 -> 219
     //   194: aload_0
-    //   195: getfield 535	com/android/settings/wifi/WifiConfigController:mDns2View	Landroid/widget/TextView;
-    //   198: invokevirtual 418	android/widget/TextView:getText	()Ljava/lang/CharSequence;
-    //   201: invokevirtual 419	java/lang/Object:toString	()Ljava/lang/String;
+    //   195: getfield 531	com/android/settings/wifi/WifiConfigController:mDns2View	Landroid/widget/TextView;
+    //   198: invokevirtual 414	android/widget/TextView:getText	()Ljava/lang/CharSequence;
+    //   201: invokevirtual 415	java/lang/Object:toString	()Ljava/lang/String;
     //   204: astore 13
     //   206: aload 13
-    //   208: invokestatic 665	android/net/NetworkUtils:numericToInetAddress	(Ljava/lang/String;)Ljava/net/InetAddress;
+    //   208: invokestatic 661	android/net/NetworkUtils:numericToInetAddress	(Ljava/lang/String;)Ljava/net/InetAddress;
     //   211: astore 15
     //   213: aload_1
     //   214: aload 15
-    //   216: invokevirtual 691	android/net/LinkProperties:addDns	(Ljava/net/InetAddress;)V
+    //   216: invokevirtual 687	android/net/LinkProperties:addDns	(Ljava/net/InetAddress;)V
     //   219: iconst_0
     //   220: ireturn
     //   221: astore 6
     //   223: aload_0
-    //   224: getfield 529	com/android/settings/wifi/WifiConfigController:mNetworkPrefixLengthView	Landroid/widget/TextView;
+    //   224: getfield 525	com/android/settings/wifi/WifiConfigController:mNetworkPrefixLengthView	Landroid/widget/TextView;
     //   227: aload_0
     //   228: getfield 86	com/android/settings/wifi/WifiConfigController:mConfigUi	Lcom/android/settings/wifi/WifiConfigUiBase;
     //   231: invokeinterface 109 1 0
-    //   236: ldc_w 692
+    //   236: ldc_w 688
     //   239: invokevirtual 143	android/content/Context:getString	(I)Ljava/lang/String;
-    //   242: invokevirtual 371	android/widget/TextView:setText	(Ljava/lang/CharSequence;)V
+    //   242: invokevirtual 367	android/widget/TextView:setText	(Ljava/lang/CharSequence;)V
     //   245: goto -159 -> 86
     //   248: aload 7
-    //   250: invokestatic 665	android/net/NetworkUtils:numericToInetAddress	(Ljava/lang/String;)Ljava/net/InetAddress;
+    //   250: invokestatic 661	android/net/NetworkUtils:numericToInetAddress	(Ljava/lang/String;)Ljava/net/InetAddress;
     //   253: astore 9
     //   255: aload_1
-    //   256: new 554	android/net/RouteInfo
+    //   256: new 550	android/net/RouteInfo
     //   259: dup
     //   260: aload 9
-    //   262: invokespecial 694	android/net/RouteInfo:<init>	(Ljava/net/InetAddress;)V
-    //   265: invokevirtual 698	android/net/LinkProperties:addRoute	(Landroid/net/RouteInfo;)V
+    //   262: invokespecial 690	android/net/RouteInfo:<init>	(Ljava/net/InetAddress;)V
+    //   265: invokevirtual 694	android/net/LinkProperties:addRoute	(Landroid/net/RouteInfo;)V
     //   268: goto -126 -> 142
     //   271: astore 8
-    //   273: ldc_w 699
+    //   273: ldc_w 695
     //   276: ireturn
     //   277: aload 10
-    //   279: invokestatic 665	android/net/NetworkUtils:numericToInetAddress	(Ljava/lang/String;)Ljava/net/InetAddress;
+    //   279: invokestatic 661	android/net/NetworkUtils:numericToInetAddress	(Ljava/lang/String;)Ljava/net/InetAddress;
     //   282: astore 12
     //   284: aload_1
     //   285: aload 12
-    //   287: invokevirtual 691	android/net/LinkProperties:addDns	(Ljava/net/InetAddress;)V
+    //   287: invokevirtual 687	android/net/LinkProperties:addDns	(Ljava/net/InetAddress;)V
     //   290: goto -106 -> 184
     //   293: astore 11
-    //   295: ldc_w 700
+    //   295: ldc_w 696
     //   298: ireturn
     //   299: astore 14
-    //   301: ldc_w 700
+    //   301: ldc_w 696
     //   304: ireturn
     //   305: astore 17
     //   307: goto -165 -> 142
     //   310: astore 16
     //   312: goto -170 -> 142
-    //   315: ldc_w 701
+    //   315: ldc_w 697
     //   318: ireturn
     //   319: astore_3
-    //   320: ldc_w 659
+    //   320: ldc_w 655
     //   323: ireturn
     //
     // Exception table:

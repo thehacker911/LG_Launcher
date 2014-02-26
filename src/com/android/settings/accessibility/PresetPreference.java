@@ -1,8 +1,6 @@
 package com.android.settings.accessibility;
 
 import android.content.Context;
-import android.preference.DialogPreference;
-import android.preference.Preference;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.accessibility.CaptioningManager;

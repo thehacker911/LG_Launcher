@@ -1,11 +1,8 @@
 package com.android.settings.inputmethod;
 
 import android.app.Activity;
-import android.app.DialogFragment;
-import android.app.Fragment;
 import android.content.ContentResolver;
 import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.content.res.Configuration;
@@ -22,10 +19,7 @@ import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceCategory;
-import android.preference.PreferenceFragment;
-import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
-import android.preference.TwoStatePreference;
 import android.provider.Settings.Secure;
 import android.provider.Settings.System;
 import android.text.TextUtils;

@@ -1,6 +1,5 @@
 package com.android.settings.applications;
 
-import android.app.Fragment;
 import android.app.ListFragment;
 import android.app.LoaderManager;
 import android.app.LoaderManager.LoaderCallbacks;
@@ -10,7 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.Loader;
-import android.content.pm.PackageItemInfo;
+import android.content.pm.ApplicationInfo;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;

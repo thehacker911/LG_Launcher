@@ -12,7 +12,6 @@ import android.graphics.Shader.TileMode;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.view.MotionEvent;
-import android.view.View;
 import android.widget.LinearLayout;
 
 public class LinearColorBar extends LinearLayout

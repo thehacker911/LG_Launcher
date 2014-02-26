@@ -1,15 +1,12 @@
 package com.android.settings;
 
-import android.app.Fragment;
 import android.content.ComponentName;
 import android.content.Intent;
-import android.content.pm.PackageItemInfo;
+import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.preference.Preference;
-import android.preference.PreferenceFragment;
-import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
 import java.util.Iterator;
 import java.util.List;

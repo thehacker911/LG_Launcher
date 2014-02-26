@@ -1,15 +1,12 @@
 package com.android.settings;
 
-import android.app.Activity;
 import android.app.Dialog;
-import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Resources;
@@ -28,7 +25,6 @@ import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
 import android.provider.Telephony.Carriers;
 import android.util.Log;
-import android.view.ContextThemeWrapper;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;

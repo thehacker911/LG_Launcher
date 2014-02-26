@@ -11,7 +11,6 @@ import android.os.UserHandle;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
-import android.preference.TwoStatePreference;
 import android.provider.Settings.Global;
 import com.android.internal.telephony.PhoneStateIntentReceiver;
 

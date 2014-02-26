@@ -1,13 +1,9 @@
 package com.android.settings.quicklaunch;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.app.Dialog;
-import android.app.ListActivity;
 import android.content.ContentResolver;
-import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
@@ -32,6 +28,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ListAdapter;
+import android.widget.ListView;
 import java.net.URISyntaxException;
 
 public class QuickLaunchSettings extends PreferenceActivity

@@ -1,8 +1,7 @@
 package com.android.settings.wifi;
 
-import android.app.Fragment;
+import android.app.Activity;
 import android.content.ContentResolver;
-import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.net.wifi.WifiInfo;
@@ -12,10 +11,7 @@ import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
-import android.preference.PreferenceFragment;
-import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
-import android.preference.TwoStatePreference;
 import android.provider.Settings.Global;
 import android.text.TextUtils;
 import android.util.Log;
@@ -178,61 +174,61 @@ public class AdvancedWifiSettings extends SettingsPreferenceFragment
   {
     // Byte code:
     //   0: aload_1
-    //   1: invokevirtual 256	android/preference/Preference:getKey	()Ljava/lang/String;
+    //   1: invokevirtual 250	android/preference/Preference:getKey	()Ljava/lang/String;
     //   4: astore_3
-    //   5: ldc 115
+    //   5: ldc 109
     //   7: aload_3
-    //   8: invokevirtual 217	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   8: invokevirtual 211	java/lang/String:equals	(Ljava/lang/Object;)Z
     //   11: ifeq +29 -> 40
     //   14: aload_2
-    //   15: checkcast 130	java/lang/String
-    //   18: invokestatic 262	java/lang/Integer:parseInt	(Ljava/lang/String;)I
+    //   15: checkcast 124	java/lang/String
+    //   18: invokestatic 256	java/lang/Integer:parseInt	(Ljava/lang/String;)I
     //   21: istore 8
     //   23: aload_0
-    //   24: getfield 43	com/android/settings/wifi/AdvancedWifiSettings:mWifiManager	Landroid/net/wifi/WifiManager;
+    //   24: getfield 39	com/android/settings/wifi/AdvancedWifiSettings:mWifiManager	Landroid/net/wifi/WifiManager;
     //   27: iload 8
     //   29: iconst_1
-    //   30: invokevirtual 266	android/net/wifi/WifiManager:setFrequencyBand	(IZ)V
+    //   30: invokevirtual 260	android/net/wifi/WifiManager:setFrequencyBand	(IZ)V
     //   33: aload_0
     //   34: aload_1
     //   35: iload 8
-    //   37: invokespecial 141	com/android/settings/wifi/AdvancedWifiSettings:updateFrequencyBandSummary	(Landroid/preference/Preference;I)V
-    //   40: ldc 143
+    //   37: invokespecial 135	com/android/settings/wifi/AdvancedWifiSettings:updateFrequencyBandSummary	(Landroid/preference/Preference;I)V
+    //   40: ldc 137
     //   42: aload_3
-    //   43: invokevirtual 217	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   43: invokevirtual 211	java/lang/String:equals	(Ljava/lang/Object;)Z
     //   46: ifeq +31 -> 77
     //   49: aload_2
-    //   50: checkcast 130	java/lang/String
+    //   50: checkcast 124	java/lang/String
     //   53: astore 5
     //   55: aload_0
-    //   56: invokevirtual 27	com/android/settings/SettingsPreferenceFragment:getContentResolver	()Landroid/content/ContentResolver;
-    //   59: ldc 150
+    //   56: invokevirtual 25	com/android/settings/wifi/AdvancedWifiSettings:getContentResolver	()Landroid/content/ContentResolver;
+    //   59: ldc 144
     //   61: aload 5
-    //   63: invokestatic 262	java/lang/Integer:parseInt	(Ljava/lang/String;)I
-    //   66: invokestatic 270	android/provider/Settings$Global:putInt	(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+    //   63: invokestatic 256	java/lang/Integer:parseInt	(Ljava/lang/String;)I
+    //   66: invokestatic 264	android/provider/Settings$Global:putInt	(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
     //   69: pop
     //   70: aload_0
     //   71: aload_1
     //   72: aload 5
-    //   74: invokespecial 154	com/android/settings/wifi/AdvancedWifiSettings:updateSleepPolicySummary	(Landroid/preference/Preference;Ljava/lang/String;)V
+    //   74: invokespecial 148	com/android/settings/wifi/AdvancedWifiSettings:updateSleepPolicySummary	(Landroid/preference/Preference;Ljava/lang/String;)V
     //   77: iconst_1
     //   78: ireturn
     //   79: astore 7
     //   81: aload_0
-    //   82: invokevirtual 62	android/app/Fragment:getActivity	()Landroid/app/Activity;
-    //   85: ldc_w 271
+    //   82: invokevirtual 54	com/android/settings/wifi/AdvancedWifiSettings:getActivity	()Landroid/app/Activity;
+    //   85: ldc_w 265
     //   88: iconst_0
-    //   89: invokestatic 277	android/widget/Toast:makeText	(Landroid/content/Context;II)Landroid/widget/Toast;
-    //   92: invokevirtual 280	android/widget/Toast:show	()V
+    //   89: invokestatic 271	android/widget/Toast:makeText	(Landroid/content/Context;II)Landroid/widget/Toast;
+    //   92: invokevirtual 274	android/widget/Toast:show	()V
     //   95: iconst_0
     //   96: ireturn
     //   97: astore 4
     //   99: aload_0
-    //   100: invokevirtual 62	android/app/Fragment:getActivity	()Landroid/app/Activity;
-    //   103: ldc_w 281
+    //   100: invokevirtual 54	com/android/settings/wifi/AdvancedWifiSettings:getActivity	()Landroid/app/Activity;
+    //   103: ldc_w 275
     //   106: iconst_0
-    //   107: invokestatic 277	android/widget/Toast:makeText	(Landroid/content/Context;II)Landroid/widget/Toast;
-    //   110: invokevirtual 280	android/widget/Toast:show	()V
+    //   107: invokestatic 271	android/widget/Toast:makeText	(Landroid/content/Context;II)Landroid/widget/Toast;
+    //   110: invokevirtual 274	android/widget/Toast:show	()V
     //   113: iconst_0
     //   114: ireturn
     //

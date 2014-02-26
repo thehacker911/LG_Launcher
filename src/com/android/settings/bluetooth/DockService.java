@@ -2,13 +2,10 @@ package com.android.settings.bluetooth;
 
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
-import android.app.Dialog;
 import android.app.Notification;
 import android.app.Service;
 import android.bluetooth.BluetoothDevice;
 import android.content.ContentResolver;
-import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.DialogInterface.OnDismissListener;

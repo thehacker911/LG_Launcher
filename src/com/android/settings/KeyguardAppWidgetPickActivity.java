@@ -25,7 +25,6 @@ import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.util.DisplayMetrics;
 import android.util.Log;
-import android.view.ContextThemeWrapper;
 import android.view.Display;
 import android.view.IWindowManager;
 import android.view.IWindowManager.Stub;
@@ -42,7 +41,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.android.internal.widget.LockPatternUtils;
-import java.lang.ref.Reference;
 import java.lang.ref.WeakReference;
 import java.util.List;
 

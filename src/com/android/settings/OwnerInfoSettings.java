@@ -1,7 +1,7 @@
 package com.android.settings;
 
+import android.app.Activity;
 import android.app.Fragment;
-import android.content.ContextWrapper;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.os.UserManager;
@@ -14,7 +14,6 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
-import android.widget.TextView;
 import com.android.internal.widget.LockPatternUtils;
 
 public class OwnerInfoSettings extends Fragment

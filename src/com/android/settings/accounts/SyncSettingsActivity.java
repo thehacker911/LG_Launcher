@@ -1,6 +1,5 @@
 package com.android.settings.accounts;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.preference.PreferenceActivity;
 

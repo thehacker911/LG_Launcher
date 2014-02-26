@@ -11,7 +11,6 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 import com.android.settings.UserDictionarySettings;
 import com.android.settings.Utils;
 import java.util.ArrayList;

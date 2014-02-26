@@ -1,19 +1,16 @@
 package com.android.settings.users;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.RestrictionEntry;
+import android.content.pm.ActivityInfo;
 import android.content.pm.ApplicationInfo;
-import android.content.pm.ComponentInfo;
 import android.content.pm.IPackageManager;
 import android.content.pm.IPackageManager.Stub;
 import android.content.pm.PackageInfo;
-import android.content.pm.PackageItemInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ParceledListSlice;
@@ -36,16 +33,13 @@ import android.os.ServiceManager;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.preference.CheckBoxPreference;
-import android.preference.DialogPreference;
 import android.preference.ListPreference;
 import android.preference.MultiSelectListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.Preference.OnPreferenceClickListener;
-import android.preference.PreferenceFragment;
 import android.preference.PreferenceGroup;
 import android.preference.SwitchPreference;
-import android.preference.TwoStatePreference;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -56,7 +50,6 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.Switch;
-import android.widget.TextView;
 import com.android.settings.SettingsPreferenceFragment;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -173,88 +166,88 @@ public class AppRestrictionsFragment extends SettingsPreferenceFragment
   {
     // Byte code:
     //   0: aload_0
-    //   1: getfield 182	com/android/settings/users/AppRestrictionsFragment:mUser	Landroid/os/UserHandle;
-    //   4: invokevirtual 256	android/os/UserHandle:getIdentifier	()I
+    //   1: getfield 178	com/android/settings/users/AppRestrictionsFragment:mUser	Landroid/os/UserHandle;
+    //   4: invokevirtual 252	android/os/UserHandle:getIdentifier	()I
     //   7: istore_3
     //   8: iload_2
     //   9: ifeq +108 -> 117
     //   12: aload_0
-    //   13: getfield 258	com/android/settings/users/AppRestrictionsFragment:mIPm	Landroid/content/pm/IPackageManager;
+    //   13: getfield 254	com/android/settings/users/AppRestrictionsFragment:mIPm	Landroid/content/pm/IPackageManager;
     //   16: aload_1
     //   17: sipush 8192
     //   20: iload_3
-    //   21: invokeinterface 264 4 0
+    //   21: invokeinterface 260 4 0
     //   26: astore 7
     //   28: aload 7
     //   30: ifnull +22 -> 52
     //   33: aload 7
-    //   35: getfield 267	android/content/pm/ApplicationInfo:enabled	Z
+    //   35: getfield 263	android/content/pm/ApplicationInfo:enabled	Z
     //   38: ifeq +14 -> 52
-    //   41: ldc 187
+    //   41: ldc 183
     //   43: aload 7
-    //   45: getfield 170	android/content/pm/ApplicationInfo:flags	I
+    //   45: getfield 166	android/content/pm/ApplicationInfo:flags	I
     //   48: iand
     //   49: ifne +21 -> 70
     //   52: aload_0
-    //   53: getfield 258	com/android/settings/users/AppRestrictionsFragment:mIPm	Landroid/content/pm/IPackageManager;
+    //   53: getfield 254	com/android/settings/users/AppRestrictionsFragment:mIPm	Landroid/content/pm/IPackageManager;
     //   56: aload_1
     //   57: aload_0
-    //   58: getfield 182	com/android/settings/users/AppRestrictionsFragment:mUser	Landroid/os/UserHandle;
-    //   61: invokevirtual 256	android/os/UserHandle:getIdentifier	()I
-    //   64: invokeinterface 271 3 0
+    //   58: getfield 178	com/android/settings/users/AppRestrictionsFragment:mUser	Landroid/os/UserHandle;
+    //   61: invokevirtual 252	android/os/UserHandle:getIdentifier	()I
+    //   64: invokeinterface 267 3 0
     //   69: pop
     //   70: aload 7
     //   72: ifnull +44 -> 116
-    //   75: ldc_w 272
+    //   75: ldc_w 268
     //   78: aload 7
-    //   80: getfield 170	android/content/pm/ApplicationInfo:flags	I
+    //   80: getfield 166	android/content/pm/ApplicationInfo:flags	I
     //   83: iand
     //   84: ifeq +32 -> 116
-    //   87: ldc 187
+    //   87: ldc 183
     //   89: aload 7
-    //   91: getfield 170	android/content/pm/ApplicationInfo:flags	I
+    //   91: getfield 166	android/content/pm/ApplicationInfo:flags	I
     //   94: iand
     //   95: ifeq +21 -> 116
     //   98: aload_0
     //   99: aload_1
-    //   100: invokespecial 276	com/android/settings/users/AppRestrictionsFragment:disableUiForPackage	(Ljava/lang/String;)V
+    //   100: invokespecial 272	com/android/settings/users/AppRestrictionsFragment:disableUiForPackage	(Ljava/lang/String;)V
     //   103: aload_0
-    //   104: getfield 258	com/android/settings/users/AppRestrictionsFragment:mIPm	Landroid/content/pm/IPackageManager;
+    //   104: getfield 254	com/android/settings/users/AppRestrictionsFragment:mIPm	Landroid/content/pm/IPackageManager;
     //   107: aload_1
     //   108: iconst_0
     //   109: iload_3
-    //   110: invokeinterface 280 4 0
+    //   110: invokeinterface 276 4 0
     //   115: pop
     //   116: return
     //   117: aload_0
-    //   118: getfield 258	com/android/settings/users/AppRestrictionsFragment:mIPm	Landroid/content/pm/IPackageManager;
+    //   118: getfield 254	com/android/settings/users/AppRestrictionsFragment:mIPm	Landroid/content/pm/IPackageManager;
     //   121: aload_1
     //   122: iconst_0
     //   123: iload_3
-    //   124: invokeinterface 264 4 0
+    //   124: invokeinterface 260 4 0
     //   129: ifnull -13 -> 116
     //   132: aload_0
-    //   133: getfield 282	com/android/settings/users/AppRestrictionsFragment:mRestrictedProfile	Z
+    //   133: getfield 278	com/android/settings/users/AppRestrictionsFragment:mRestrictedProfile	Z
     //   136: ifeq +23 -> 159
     //   139: aload_0
-    //   140: getfield 258	com/android/settings/users/AppRestrictionsFragment:mIPm	Landroid/content/pm/IPackageManager;
+    //   140: getfield 254	com/android/settings/users/AppRestrictionsFragment:mIPm	Landroid/content/pm/IPackageManager;
     //   143: aload_1
     //   144: aconst_null
     //   145: aload_0
-    //   146: getfield 182	com/android/settings/users/AppRestrictionsFragment:mUser	Landroid/os/UserHandle;
-    //   149: invokevirtual 256	android/os/UserHandle:getIdentifier	()I
+    //   146: getfield 178	com/android/settings/users/AppRestrictionsFragment:mUser	Landroid/os/UserHandle;
+    //   149: invokevirtual 252	android/os/UserHandle:getIdentifier	()I
     //   152: iconst_4
-    //   153: invokeinterface 286 5 0
+    //   153: invokeinterface 282 5 0
     //   158: return
     //   159: aload_0
     //   160: aload_1
-    //   161: invokespecial 276	com/android/settings/users/AppRestrictionsFragment:disableUiForPackage	(Ljava/lang/String;)V
+    //   161: invokespecial 272	com/android/settings/users/AppRestrictionsFragment:disableUiForPackage	(Ljava/lang/String;)V
     //   164: aload_0
-    //   165: getfield 258	com/android/settings/users/AppRestrictionsFragment:mIPm	Landroid/content/pm/IPackageManager;
+    //   165: getfield 254	com/android/settings/users/AppRestrictionsFragment:mIPm	Landroid/content/pm/IPackageManager;
     //   168: aload_1
     //   169: iconst_1
     //   170: iload_3
-    //   171: invokeinterface 280 4 0
+    //   171: invokeinterface 276 4 0
     //   176: pop
     //   177: return
     //   178: astore 6
@@ -561,7 +554,7 @@ public class AppRestrictionsFragment extends SettingsPreferenceFragment
         String str = localRestrictionEntry.getSelectedString();
         if (str == null)
           str = localRestrictionEntry.getDescription();
-        ((ListPreference)localObject).setSummary(findInArray(localRestrictionEntry.getChoiceEntries(), localRestrictionEntry.getChoiceValues(), str));
+        ((Preference)localObject).setSummary(findInArray(localRestrictionEntry.getChoiceEntries(), localRestrictionEntry.getChoiceValues(), str));
         ((ListPreference)localObject).setEntryValues(localRestrictionEntry.getChoiceValues());
         ((ListPreference)localObject).setEntries(localRestrictionEntry.getChoiceEntries());
         ((ListPreference)localObject).setValue(str);

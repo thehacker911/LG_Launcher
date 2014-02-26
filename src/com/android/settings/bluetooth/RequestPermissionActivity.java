@@ -3,10 +3,8 @@ package com.android.settings.bluetooth;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
-import android.app.Dialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
@@ -14,7 +12,6 @@ import android.content.IntentFilter;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.ContextThemeWrapper;
 
 public class RequestPermissionActivity extends Activity
   implements DialogInterface.OnClickListener

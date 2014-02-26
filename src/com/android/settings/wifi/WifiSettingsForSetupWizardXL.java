@@ -2,7 +2,6 @@ package com.android.settings.wifi;
 
 import android.app.Activity;
 import android.app.FragmentManager;
-import android.content.Context;
 import android.content.Intent;
 import android.net.NetworkInfo.DetailedState;
 import android.net.wifi.WifiConfiguration;

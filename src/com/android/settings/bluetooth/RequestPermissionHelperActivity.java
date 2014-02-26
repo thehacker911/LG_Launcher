@@ -1,14 +1,11 @@
 package com.android.settings.bluetooth;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.ContextThemeWrapper;
 import com.android.internal.app.AlertActivity;
 import com.android.internal.app.AlertController.AlertParams;
 

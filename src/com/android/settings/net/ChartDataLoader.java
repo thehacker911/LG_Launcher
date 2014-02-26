@@ -2,7 +2,6 @@ package com.android.settings.net;
 
 import android.content.AsyncTaskLoader;
 import android.content.Context;
-import android.content.Loader;
 import android.net.INetworkStatsSession;
 import android.net.NetworkStatsHistory;
 import android.net.NetworkTemplate;

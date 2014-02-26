@@ -1,12 +1,11 @@
 package com.android.settings;
 
+import android.app.Activity;
 import android.app.AlertDialog.Builder;
 import android.app.Dialog;
-import android.app.Fragment;
 import android.app.backup.IBackupManager;
 import android.app.backup.IBackupManager.Stub;
 import android.content.ContentResolver;
-import android.content.ContextWrapper;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
@@ -17,10 +16,7 @@ import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
-import android.preference.PreferenceFragment;
-import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
-import android.preference.TwoStatePreference;
 import android.provider.Settings.Secure;
 
 public class PrivacySettings extends SettingsPreferenceFragment

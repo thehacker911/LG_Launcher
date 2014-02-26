@@ -1,6 +1,5 @@
 package com.android.settings.wifi;
 
-import android.app.Activity;
 import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
@@ -9,7 +8,6 @@ import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceActivity;
-import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
 import android.text.Editable;
 import android.widget.EditText;

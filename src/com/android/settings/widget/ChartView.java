@@ -8,7 +8,6 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.View.MeasureSpec;
 import android.view.ViewDebug.ExportedProperty;
-import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.FrameLayout.LayoutParams;
 import com.android.internal.util.Preconditions;

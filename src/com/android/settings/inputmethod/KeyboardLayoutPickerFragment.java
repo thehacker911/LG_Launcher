@@ -1,7 +1,6 @@
 package com.android.settings.inputmethod;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.Intent;
 import android.hardware.input.InputManager;
 import android.hardware.input.InputManager.InputDeviceListener;
@@ -9,11 +8,8 @@ import android.hardware.input.KeyboardLayout;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
-import android.preference.PreferenceFragment;
-import android.preference.PreferenceGroup;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
-import android.preference.TwoStatePreference;
 import android.view.InputDevice;
 import com.android.settings.SettingsPreferenceFragment;
 import java.util.Arrays;

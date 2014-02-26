@@ -9,7 +9,6 @@ import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceScreen;
-import android.preference.TwoStatePreference;
 
 public class NfcEnabler
   implements Preference.OnPreferenceChangeListener

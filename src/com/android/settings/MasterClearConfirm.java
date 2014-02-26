@@ -1,7 +1,7 @@
 package com.android.settings;
 
+import android.app.Activity;
 import android.app.Fragment;
-import android.content.ContextWrapper;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;

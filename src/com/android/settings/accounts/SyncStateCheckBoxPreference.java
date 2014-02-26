@@ -4,12 +4,9 @@ import android.accounts.Account;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.preference.CheckBoxPreference;
-import android.preference.Preference;
-import android.preference.TwoStatePreference;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 import com.android.settings.widget.AnimatedImageView;
 

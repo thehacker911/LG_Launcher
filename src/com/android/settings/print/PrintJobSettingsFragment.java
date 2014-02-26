@@ -2,12 +2,10 @@ package com.android.settings.print;
 
 import android.app.Activity;
 import android.app.ActivityManager;
-import android.app.Fragment;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.preference.Preference;
-import android.preference.PreferenceFragment;
-import android.preference.PreferenceGroup;
+import android.preference.PreferenceScreen;
 import android.print.PrintJob;
 import android.print.PrintJobId;
 import android.print.PrintJobInfo;

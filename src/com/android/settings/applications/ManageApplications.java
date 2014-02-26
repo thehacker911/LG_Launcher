@@ -5,13 +5,11 @@ import android.app.ActivityManager;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.app.AppOpsManager;
-import android.app.Dialog;
 import android.app.Fragment;
 import android.app.INotificationManager;
 import android.app.INotificationManager.Stub;
 import android.content.ComponentName;
 import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.DialogInterface.OnDismissListener;
@@ -20,7 +18,6 @@ import android.content.ServiceConnection;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.IPackageManager;
 import android.content.pm.IPackageManager.Stub;
-import android.content.pm.PackageItemInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.net.NetworkPolicyManager;
@@ -42,7 +39,6 @@ import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.text.BidiFormatter;
 import android.text.format.Formatter;
 import android.util.Log;
-import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -50,13 +46,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
-import android.widget.AbsListView;
 import android.widget.AbsListView.RecyclerListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.Filter;
 import android.widget.Filter.FilterResults;
 import android.widget.Filterable;
@@ -1046,7 +1040,7 @@ public class ManageApplications extends Fragment
           this.mFreeStorageText = ((TextView)this.mListContainer.findViewById(2131230899));
           Utils.prepareCustomPreferencesList(paramViewGroup, paramView, this.mListView, false);
           if (this.mFilter != 2)
-            break label342;
+            break label341;
           this.mStorageChartLabel.setText(this.mOwner.getActivity().getText(2131428416));
         }
       }
@@ -1059,7 +1053,7 @@ public class ManageApplications extends Fragment
         return this.mRootView;
         i = 2130968643;
         break;
-        label342: this.mStorageChartLabel.setText(this.mOwner.getActivity().getText(2131428415));
+        label341: this.mStorageChartLabel.setText(this.mOwner.getActivity().getText(2131428415));
       }
     }
 
